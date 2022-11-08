@@ -1,0 +1,23 @@
+@import './styles/variables';
+@import './styles/typography';
+
+/* covers pseudo elements as well to avoid unexpected outcome */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  /* allows for child container to inherit parent container's box-sizing in
+  case it changes, so you won't have to manually change the child container*/
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  /* see below for details */
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%; // 8px/16px = 50% -> 1rem = 8px
+  }
+}
