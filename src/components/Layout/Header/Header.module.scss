@@ -1,0 +1,44 @@
+@import '../../../styles/variables';
+@import '../../../styles/typography';
+
+.header {
+  display: grid;
+  grid-template-columns: max-content 1fr minmax(21rem, max-content);
+  grid-template-rows: 6rem;
+  grid-column: header-start/header-end;
+  grid-auto-flow: row;
+  align-items: center;
+
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: $color-primary-header;
+  color: #ffffff;
+
+  &__content {
+    display: flex;
+
+    list-style: none;
+    justify-content: start;
+    gap: 3.5rem;
+  }
+
+  &__icons {
+    padding: 0 2.8rem;
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__btn {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    &__signIn{
+      background-color:$color-primary-header;
+      transition: all .2s;
+      &:hover {
+        background-color: #373c3e;
+    }
+    }
+    
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../../styles/variables';
+@import '../../../styles/typography';
+
+.logo-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content;
+  grid-column: logo-start / logo-end;
+  grid-row: 2/4;
+  align-items: center;
+
+  padding-top: 1.4rem;
+  
+  &__logo {
+    display: flex;
+    justify-self: center;
+  }
+
+  p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666666;
+    font-size: 1.5rem;
+    grid-column: 1/2;
+    font-style: italic;
+  }
+
+}

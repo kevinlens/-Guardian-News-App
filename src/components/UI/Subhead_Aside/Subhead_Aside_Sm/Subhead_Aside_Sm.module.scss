@@ -1,0 +1,35 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/typography';
+
+.subhead {
+  display: grid;
+  grid-template-columns: 51% 49%;
+  grid-template-rows: 7rem 2rem;
+  padding-right:.5rem;
+  justify-content: start;
+
+  margin-bottom: 2rem;
+
+  h3{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &__header {
+    font-size: 1.6rem;
+    text-align: left;
+    width: 95%;
+    
+  }
+  
+  &__img{
+    width: 100%;
+    height: 15.5rem;
+  }
+
+  &__author {
+    font-size: 1.2rem;
+    margin-top: -1rem;
+}
+
+}

@@ -1,0 +1,45 @@
+@import '../../../styles/variables';
+@import '../../../styles/typography';
+
+.section2{
+  display: grid;
+  grid-template-columns: 80% 21%;
+  grid-column: full-start/full-end;
+  grid-row: 18/19;
+  
+  &__two_articles {
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  &__mini_articles {
+    position: relative;
+    padding-left: 3.2rem;
+    margin-top: 2rem;
+    &::after {
+      content: '';
+      position: absolute;
+      height: 179%;
+      width: .1rem;
+      background: #e9e9e9;
+      top: 0rem;
+      left: 1.5rem;
+    }
+  }
+
+  &__column_border {
+    background-color: black;
+    width: .12rem;
+    height: 15.5rem;
+    margin: 0 1.5rem 0 1rem;
+    }
+
+  &__separator_lightgrey {
+    display: grid;
+    grid-column: 1/3;
+    width: 100%;
+  }
+
+}

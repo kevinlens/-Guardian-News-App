@@ -1,0 +1,48 @@
+@import './variables';
+
+body {
+  font-family: $font-primary;
+  color: $color-primary;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+/* CSS Placeholder*/
+%heading {
+  /* variable accessed from _base.scss*/
+  font-family: 400px;
+}
+
+.heading-1 {
+  @extend %heading;
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.heading-2 {
+  @extend %heading;
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1;
+}
+
+.heading-3 {
+  @extend %heading;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.heading-4 {
+  @extend %heading;
+  font-size: 1.9rem;
+}
+
+.btn {
+  font-size: 1.5rem;
+  background-color: #166dfc;
+  color: white;
+  text-decoration: none;
+  padding: 1.2rem 1.5rem;
+  display: inline-block;
+  border-radius: 10rem;
+}

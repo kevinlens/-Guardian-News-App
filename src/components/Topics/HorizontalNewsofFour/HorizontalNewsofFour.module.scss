@@ -1,0 +1,28 @@
+@import '../../../styles/variables';
+@import '../../../styles/typography';
+
+.horizontalNewsofFour {
+  display: grid;
+  grid-template-columns: 1fr 3rem 1fr 3rem 1fr 3rem 1fr;
+  grid-template-rows: min-content;
+  grid-column: full-start / full-end;
+  grid-row: 17/18;
+
+  &::before {
+    display: grid;
+    grid-column: 1 / 9;
+    background-color: black;
+    height: .1rem;
+    width: 100%;
+    content: "";
+    display: block;
+    margin-bottom: 4rem;
+  }
+
+  &__column_border {
+  background-color: #666666;
+  width: .12rem;
+  height: 59%;
+  margin-left:1.5rem;
+  }
+}
