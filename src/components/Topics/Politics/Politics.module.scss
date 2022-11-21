@@ -1,0 +1,77 @@
+.politics {
+  display: grid;
+  grid-template-columns: minmax(64.5rem, min-content) minmax(64.5rem, min-content);
+  grid-row: 1fr 1fr 1fr 1fr;
+  column-gap: .8rem;
+
+  &__separator_full {
+    display: grid;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    width: 99.6%;
+    margin-bottom: .75rem;
+  }
+
+  &__separator_quarter {
+    margin-bottom: 2rem;
+  }
+
+  &__column_border_1 {
+    background-color: #e9e9e9;
+    width: .12rem;
+    height: 95%;
+    margin-left: 1rem;
+  }
+
+  &__column_border_2 {
+    background-color: #e9e9e9;
+    width: .12rem;
+    height: 95%;
+    margin-left: .6rem;
+  }
+
+  &__topic {
+    display: grid;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 2rem;
+    &::after {
+      content: '>';
+      position: absolute;
+      height: 104rem;
+      width: 1px;
+      top:-.2rem;
+      left: 7.5rem;
+      font-weight: 100;
+    }
+  }
+
+  &__block_1 {
+    display: grid;
+    grid-template-columns: 1fr 2rem;
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  &__block_2 {
+    display: grid;
+    grid-template-columns: min-content 1.75rem min-content;
+    grid-column: 2/3;
+    column-gap: .5rem;
+    margin-left: .75rem;
+
+    &__row_1 {
+      display: grid;
+    }
+    &__row_2 {
+      display: grid;
+      
+    }
+
+  }
+}
+

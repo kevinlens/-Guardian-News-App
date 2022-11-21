@@ -9,7 +9,7 @@ const Section2 = () => {
   return (
     <div className={styles.section2}>
 
-      <div className={styles.section2__separator_lightgrey}>
+      <div className={styles.section2__separator_full}>
         <Line_Separator lineColor='#e9e9e9' />
       </div>
 
@@ -23,12 +23,17 @@ const Section2 = () => {
 
         <Subhead_Aside_Lg topic='immigration' />
         <Subhead_Aside_Lg />
-        <Subhead_Aside_Lg />
       </div>
 
       <div className={styles.section2__mini_articles}>
         <Subhead_xs />
+        <div className={styles.section2__separator_quarter}>
+          <Line_Separator lineColor='#000000' />
+        </div>
         <Subhead_xs />
+        <div className={styles.section2__separator_quarter}>
+          <Line_Separator lineColor='#000000' />
+        </div>
         <Subhead_xs />
       </div>
 
