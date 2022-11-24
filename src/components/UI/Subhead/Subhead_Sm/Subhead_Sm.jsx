@@ -1,15 +1,26 @@
-import React from 'react'
-import styles from './Subhead_Sm.module.scss'
-import exampleImage from '../../../../assets/Images/imrs5.jpg'
+import React from 'react';
+import styles from './Subhead_Sm.module.scss';
 
-const Subhead_Sm = () => {
-  return (
-    <div className={styles.subhead}>
-      <img className={styles.subhead__img} src={exampleImage} alt='example image' />
-      <p className={styles.subhead__header}>Ticketmaster suspends Taylor Swift ticket sales Friday after chaotic rollout</p>
-      <p className={styles.subhead__author}>by Jennifer Rubin</p>
-    </div>
-  )
-}
+const Subhead_Sm = (props) => {
+  let content = '';
 
-export default Subhead_Sm
+  if (props.data) {
+    content = (
+      <>
+        <img
+          className={styles.subhead__img}
+          src={props.data.image}
+          alt='loading'
+        />
+        <p className={styles.subhead__header}>{props.data.title}</p>
+        <p className={styles.subhead__author}>
+          {props.data.author ? `by ${props.data.author}` : ''}
+        </p>
+      </>
+    );
+  }
+
+  return <div className={styles.subhead}>{content}</div>;
+};
+
+export default Subhead_Sm;
