@@ -17,7 +17,7 @@ const Subhead_Aside_xs = (props) => {
           src={props.data.image}
           alt='example image'
         />
-        <p className={styles.subhead__author}>Opinion by Jennifer Rubin</p>
+        <p className={styles.subhead__author}>by {props.data.author}</p>
       </>
     );
   }

@@ -22,10 +22,11 @@ const useFetch = () => {
         if (newsData.tags.length >= 1) {
           author = newsData.tags[0].webTitle;
         }
-        let primaryPhoto, primaryCaption = '';
+        let primaryPhoto, primaryCaption, photographer = '';
         
         if(newsData.blocks.main){
           primaryCaption = newsData.blocks.main.elements[0].imageTypeData.caption;
+          photographer = newsData.blocks.main.elements[0].imageTypeData.credit;
         }
         if (!newsData.blocks.main) {
           primaryPhoto = newsData.fields.thumbnail;
@@ -44,6 +45,7 @@ const useFetch = () => {
           body: newsData.blocks.body[0].bodyTextSummary,
           thumbnail: newsData.fields.thumbnail,
           image: primaryPhoto,
+          photographer: photographer
         };
       });
       setData(newsData);

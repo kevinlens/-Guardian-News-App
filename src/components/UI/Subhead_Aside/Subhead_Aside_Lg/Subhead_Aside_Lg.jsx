@@ -27,7 +27,7 @@ const Subhead_Aside_Lg = (props) => {
       <img className={styles.subhead__img} src={props.data.image} alt='loading' />
 
       <div className={styles.subhead__credit}>
-        <p>(Shuran Huang/For The Washington Post)</p>
+        <p>{props.data.photographer}</p>
       </div>
         </>
       );

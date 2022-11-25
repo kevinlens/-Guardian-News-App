@@ -1,12 +1,21 @@
 import React from 'react'
 import styles from './Filler_Subhead_Aside_xs.module.scss'
-import exampleImage from '../../../../../assets/Images/imrs.jpg'
 
-const Filler_Subhead_Aside_xs  = () => {
+const Filler_Subhead_Aside_xs  = (props) => {
+  let content = '';
+
+  if (props.data) {
+    content = (
+      <>
+        <p className={styles.subhead__header}>{props.data.title}</p>
+        <img className={styles.subhead__img} src={props.data.image} alt='example image' />
+      </>
+    );
+  }
+
   return (
     <div className={styles.subhead}>
-      <p className={styles.subhead__header}>Biden has been granted a new lease on life</p>
-      <img className={styles.subhead__img} src={exampleImage} alt='example image' />
+      {content}
     </div>
   )
 }

@@ -2,10 +2,13 @@ import React from 'react'
 
 import styles from './Subhead_Aside_Sm_HeadingOnly.module.scss'
 
-const Subhead_Aside_Sm_HeadingOnly = () => {
+const Subhead_Aside_Sm_HeadingOnly = (props) => {
+  
   return (
     <div className={styles.subhead}>
-      <h3 className={styles.subhead__header}>How the pandemic ended America’s bad romance with work</h3>
+      {props.data && 
+      <h3 className={styles.subhead__header}>{props.data.title}</h3>
+      }
     </div>
   )
 }

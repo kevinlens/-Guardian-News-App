@@ -1,13 +1,23 @@
 import React from 'react'
 import styles from './Subhead_xs.module.scss'
-import exampleImage from '../../../../assets/Images/imrs3.jpg'
 
-const Subhead_xs = () => {
+const Subhead_xs = (props) => {
+
+  let content = '';
+
+  if (props.data) {
+    content = (
+      <>
+      <img className={styles.subhead__img} src={props.data.image} alt='example image' />
+      <p className={styles.subhead__header}>{props.data.title}</p>
+      <p className={styles.subhead__author}>by {props.data.author}</p>
+      </>
+    );
+  }
+
   return (
     <div className={styles.subhead}>
-      <img className={styles.subhead__img} src={exampleImage} alt='example image' />
-      <p className={styles.subhead__header}>Ticketmaster suspends Taylor Swift ticket sales Friday after chaotic rollout</p>
-      <p className={styles.subhead__author}>by Jennifer Rubin</p>
+      {content}
     </div>
   )
 }
