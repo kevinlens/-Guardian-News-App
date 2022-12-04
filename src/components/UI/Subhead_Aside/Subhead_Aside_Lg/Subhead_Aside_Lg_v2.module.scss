@@ -4,20 +4,12 @@
 
 .subhead {
   display: grid;
-  grid-template-columns: 1fr 25%;
-  grid-template-rows: min-content min-content;
+  grid-template-columns: 75.5% 24.5%;
+  // grid-template-columns: 51.5% 48.5%;
   font-size: 1.5rem;
   margin-top: 2rem;
+  @media only screen and (max-width: $bp-enormous){
 
-  &::before {
-    display: grid;
-    grid-column: 1 / 9;
-    background-color: black;
-    height: .1rem;
-    width: 100%;
-    content: "";
-    display: block;
-    margin-bottom: 3rem;
   }
 
   h1 {
@@ -27,23 +19,34 @@
   }
 
   p {
-    width: 90%;
     margin-bottom: 1rem;
+  }
+
+  &__separator {
+    display: grid;
+    grid-column: 1/-1;
+    margin-bottom: 2rem;
   }
 
   &__img{
     display: flex;
-    width: 93%;
+    max-width: 93%;
     justify-self: flex-end;
+    object-fit: cover;
+
   }
 
   &__author {
+    font-family: ITC_Franklin;
     font-size: 1.1rem;
+
   }
 
   &__credit {
     display: grid;
     grid-column: 2/3;
+    justify-self: center;
+
     margin-top: .5rem;
     font-size: 1rem;
 

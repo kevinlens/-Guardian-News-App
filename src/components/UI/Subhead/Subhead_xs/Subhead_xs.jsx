@@ -1,16 +1,16 @@
 import React from 'react'
 import styles from './Subhead_xs.module.scss'
 
-const Subhead_xs = (props) => {
+const Subhead_xs = ({article}) => {
 
   let content = '';
 
-  if (props.data) {
+  if (article) {
     content = (
       <>
-      <img className={styles.subhead__img} src={props.data.image} alt='example image' />
-      <p className={styles.subhead__header}>{props.data.title}</p>
-      <p className={styles.subhead__author}>by {props.data.author}</p>
+      <img className={styles.subhead__img} src={article.image} alt='example image' />
+      <p className={styles.subhead__header}>{article.title}</p>
+      <p className={styles.subhead__author}>by {article.author}</p>
       </>
     );
   }

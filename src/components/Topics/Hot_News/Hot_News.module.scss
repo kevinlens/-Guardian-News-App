@@ -5,5 +5,8 @@
 .Hot_News{
   display: grid;
   grid-column: 1 / 9;
+  @media only screen and (max-width: $bp-enormous){
+    grid-column: full-start / full-end;
+  }
 }
 

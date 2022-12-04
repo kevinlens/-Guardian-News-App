@@ -31,8 +31,6 @@ const Headline = () => {
     status = <p>{error}</p>;
   }
 
-  console.log(data)
-
   return (
     <div className={styles.headline}>
       <Line_Separator />

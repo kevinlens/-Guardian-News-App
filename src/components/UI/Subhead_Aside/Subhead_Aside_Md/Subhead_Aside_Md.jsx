@@ -3,16 +3,16 @@ import React from 'react'
 import styles from './Subhead_Aside_Md.module.scss'
 import exampleImage from '../../../../assets/Images/imrs7.jpg'
 
-const Subhead_Aside_Md = (props) => {
+const Subhead_Aside_Md = ({article}) => {
 
   let content = '';
 
-  if (props.data) {
+  if (article) {
     content = (
       <>
-      <h3 className={styles.subhead__header}>{props.data.title}</h3>
-      <p className={styles.subhead__description}>{props.data.title}</p>
-      <img className={styles.subhead__img} src={props.data.image} alt='example image' />
+      <h3 className={styles.subhead__header}>{article.title}</h3>
+      <p className={styles.subhead__description}>{article.title}</p>
+      <img className={styles.subhead__img} src={article.image} alt='example image' />
       </>
     );
   }

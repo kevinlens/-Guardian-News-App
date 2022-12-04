@@ -1,0 +1,119 @@
+@import '../../../styles/variables';
+@import '../../../styles/typography';
+
+//Entirety of the component
+.topic {
+  display: grid;
+  grid-column: 9 / 12;
+  grid-row: 3 / 10;
+  padding-left: 2.6rem;
+  position: relative;
+
+  @media only screen and (max-width: $bp-enormous) {
+    grid-template-columns: repeat(auto-fit, 22.5rem);
+    grid-column: full-start/full-end;
+    grid-row: 12/15;
+    padding-left: 0;
+    column-gap: 4rem;
+  }
+
+  @media only screen and (max-width: $bp-largest){
+    grid-template-columns:1fr 1fr 1fr 1fr;
+  }
+
+  //h2 for Primary Header
+  h2 {
+    font-family: ITC_Franklin-Bold;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+
+  // the container with ALL our news article components!
+  &__articles {
+    display: grid;
+    column-gap: 4rem;
+
+    div:not(:last-child){
+      border-bottom: 1px solid #e9e9e9;
+    }
+
+    @media only screen and (max-width: $bp-enormous) {
+      display: grid;
+      grid-template-columns:1fr 1fr 1fr 1fr;
+
+      grid-column: 1/-1;
+
+      
+      div:nth-last-of-type(-n+3){
+        border-bottom: none;
+      }
+      
+      div:nth-child(-n+3) {
+        &::after {
+          content: '';
+          position: absolute;
+          height: 33vh;
+          width: 1px;
+          background: #e9e9e9;
+          right: -2rem;
+        }   
+      }
+    }
+
+    @media only screen and (max-width: $bp-largest){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      grid-column: 1/-1;
+    }
+
+  }
+  
+  //Black line separator above the Primary Header
+  &__separator_black {
+    display: grid;
+    grid-column: 1/2;
+    @media only screen and (max-width: $bp-enormous) {
+      grid-column: 1/-1;
+    }
+  }
+
+  //Single line that exists only for when screen with maxed
+  &::after {
+    content: '';
+    position: absolute;
+    height: 104rem;
+    width: 1px;
+    background: #e9e9e9;
+    left: 1.25rem;
+    @media only screen and (max-width: $bp-enormous) {
+      display: none;
+    }
+  }
+
+  // The one and only Primary Header of this component
+  &__siliconValley {
+    display: grid;
+    padding-bottom: 2rem;
+    position: relative;
+    margin-top: 1rem;
+    &::after {
+      content: '>';
+      position: absolute;
+      right: 8rem;
+      top: -0.2rem;
+      font-weight: 100;
+      @media only screen and (max-width: $bp-enormous) {
+        right: 0;
+        left: 13.5rem;
+      }
+    }
+    @media only screen and (max-width: $bp-enormous) {
+      display: grid;
+      grid-column: 1/5;
+    }
+  }
+
+}

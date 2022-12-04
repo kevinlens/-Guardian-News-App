@@ -20,7 +20,7 @@ const Hot_News = () => {
   const newsCtx = useContext(NewsContext);
   useEffect(() => {
     fetchNow({
-      url: `https://content.guardianapis.com/science?search?from-date=${newsCtx.currentDate}&page-size=10&show-fields=body%2Cthumbnail%2CshouldHideAdverts%2Cheadline%2C&show-elements=image&show-blocks=all&show-tags=contributor&api-key=${import.meta.env.VITE_MY_API_KEY}`,
+      url: `https://content.guardianapis.com/food?search?from-date=${newsCtx.currentDate}&page-size=10&show-fields=body%2Cthumbnail%2CshouldHideAdverts%2Cheadline%2C&show-elements=image&show-blocks=all&show-tags=contributor&api-key=${import.meta.env.VITE_MY_API_KEY}`,
     });
   }, [fetchNow]);
 
@@ -36,9 +36,9 @@ const Hot_News = () => {
     <div className={styles.Hot_News}>
       {!isLoading && !error && data && (
         <>
-          <Subhead_Aside_Lg data={data[0]} isMainArticle='yes' />
-          <Subhead_Aside_Lg data={data[1]} />
-          <Subhead_Aside_Lg_v2 data={data[2]} />
+          <Subhead_Aside_Lg article={data[0]} topic='Recipes' isMainArticle='yes' />
+          <Subhead_Aside_Lg article={data[1]} />
+          <Subhead_Aside_Lg_v2 article={data[5]} />
         </>
       )}
       {status}

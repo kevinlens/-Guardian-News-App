@@ -2,15 +2,15 @@ import React from 'react'
 
 import styles from './Subhead_Aside_Sm.module.scss'
 
-const Subhead_Aside_Sm = (props) => {
+const Subhead_Aside_Sm = ({article}) => {
   let content = '';
 
-if (props.data) {
+if (article) {
   content = (
     <>
-      <h3 className={styles.subhead__header}>{props.data.title}</h3>
-      <img className={styles.subhead__img} src={props.data.image} alt='example image' />
-      <p className={styles.subhead__author}>{props.data.author}</p>
+      <h3 className={styles.subhead__header}>{article.title}</h3>
+      <img className={styles.subhead__img} src={article.image} alt='example image' />
+      <p className={styles.subhead__author}>by {article.author}</p>
     </>
   );
 }

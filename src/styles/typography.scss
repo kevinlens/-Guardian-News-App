@@ -13,6 +13,10 @@ body {
   font-family: 400px;
 }
 
+h1,h2,h3,p{
+  font-family: PostoniWide;
+}
+
 .heading-1 {
   @extend %heading;
   font-size: 4.5rem;
@@ -38,11 +42,12 @@ body {
 }
 
 .btn {
-  font-size: 1.5rem;
+  font-family: ITC_Franklin-Bold;
+  font-size: 1.7rem;
   background-color: #166dfc;
   color: white;
   text-decoration: none;
-  padding: 1.2rem 1.5rem;
+  padding: 1.3rem 2.3rem 1.2rem 2.3rem;
   display: inline-block;
   border-radius: 10rem;
 }

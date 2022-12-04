@@ -1,6 +1,6 @@
 .politics {
   display: grid;
-  grid-template-columns: minmax(64.5rem, min-content) minmax(64.5rem, min-content);
+  grid-template-columns: 50% 50%;
   grid-row: 1fr 1fr 1fr 1fr;
   column-gap: .8rem;
 

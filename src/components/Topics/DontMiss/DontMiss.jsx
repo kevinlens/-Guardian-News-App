@@ -20,7 +20,7 @@ const DontMiss = () => {
   const newsCtx = useContext(NewsContext);
   useEffect(() => {
     fetchNow({
-      url: `https://content.guardianapis.com/us/environment?search?from-date=${
+      url: `https://content.guardianapis.com/environment/food?search?from-date=${
         newsCtx.currentDate
       }&page-size=10&show-fields=body%2Cthumbnail%2CshouldHideAdverts%2Cheadline%2C&show-elements=image&show-blocks=all&show-tags=contributor&api-key=${
         import.meta.env.VITE_MY_API_KEY
@@ -44,13 +44,13 @@ const DontMiss = () => {
       <div className={styles.dontMiss__topic}>Don't Miss</div>
       {!isLoading && !error && data && (
         <>
-          <Subhead_Sm data={data[0]}/>
+          <Subhead_Sm article={data[0]}/>
           <div className={styles.dontMiss__column_border}></div>
-          <Subhead_Sm data={data[1]}/>
+          <Subhead_Sm article={data[1]}/>
           <div className={styles.dontMiss__column_border}></div>
-          <Subhead_Sm data={data[2]}/>
+          <Subhead_Sm article={data[2]}/>
           <div className={styles.dontMiss__column_border}></div>
-          <Subhead_Sm data={data[3]}/>
+          <Subhead_Sm article={data[3]}/>
         </>
       )}
     </div>

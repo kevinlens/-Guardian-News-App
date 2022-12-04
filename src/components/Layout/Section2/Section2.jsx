@@ -48,25 +48,25 @@ const Section2 = () => {
         <>
           <div>
             <div className={styles.section2__two_articles}>
-              <Subhead_Aside_Sm data={data[0]} />
+              <Subhead_Aside_Sm article={data[0]} />
               <div className={styles.section2__column_border}></div>
-              <Subhead_Aside_Sm data={data[1]} />
+              <Subhead_Aside_Sm article={data[1]} />
             </div>
 
-            <Subhead_Aside_Lg topic='immigration' data={data[3]} />
-            <Subhead_Aside_Lg data={data[4]} />
+            <Subhead_Aside_Lg topic='immigration' article={data[3]} />
+            <Subhead_Aside_Lg article={data[4]} />
           </div>
 
           <div className={styles.section2__mini_articles}>
-            <Subhead_xs data={data[5]} />
+            <Subhead_xs article={data[5]} />
             <div className={styles.section2__separator_quarter}>
               <Line_Separator lineColor='#000000' />
             </div>
-            <Subhead_xs data={data[6]} />
+            <Subhead_xs article={data[6]} />
             <div className={styles.section2__separator_quarter}>
               <Line_Separator lineColor='#000000' />
             </div>
-            <Subhead_xs data={data[7]} />
+            <Subhead_xs article={data[7]} />
           </div>
         </>
       )}

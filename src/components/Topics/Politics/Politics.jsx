@@ -47,27 +47,27 @@ const Politics = () => {
       {!isLoading && !error && data && (
         <>
           <div className={styles.politics__block_1}>
-            <Subhead_Lg data={data[0]} />
+            <Subhead_Lg article={data[0]} />
             <div className={styles.politics__column_border_1}></div>
           </div>
 
           <div className={styles.politics__block_2}>
             <div className={styles.politics__block_2__row_1}>
-              <Subhead_Sm data={data[1]} />
+              <Subhead_Sm article={data[1]} />
 
               <div className={styles.politics__separator_quarter}>
                 <Line_Separator lineColor='#e9e9e9' />
               </div>
-              <Subhead_Sm data={data[2]} />
+              <Subhead_Sm article={data[2]} />
             </div>
             <div className={styles.politics__column_border_2}></div>
             <div className={styles.politics__block_2__row_2}>
-              <Subhead_Sm data={data[5]} />
+              <Subhead_Sm article={data[5]} />
 
               <div className={styles.politics__separator_quarter}>
                 <Line_Separator lineColor='#e9e9e9' />
               </div>
-              <Subhead_Sm data={data[4]} />
+              <Subhead_Sm article={data[4]} />
             </div>
           </div>
         </>

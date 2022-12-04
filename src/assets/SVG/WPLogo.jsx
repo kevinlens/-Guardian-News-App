@@ -4,8 +4,8 @@ const WPLogo = () => {
   return (
     <svg
       viewBox='0 0 403 62'
-      width='40rem'
-      height='7.5rem'
+      min-width='45rem'
+      height='6.5rem'
     >
       <title>Logo of The Washington Post</title>
       <path

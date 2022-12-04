@@ -20,10 +20,12 @@
   &__img{
     width: 62.8rem;
     height: 41.9rem;
+    object-fit: cover;
   }
 
   &__author {
     font-size: 1.2rem;
     margin-top: -1rem;
+    font-family: ITC_Franklin;
   }
 }

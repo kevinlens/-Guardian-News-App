@@ -1,20 +1,20 @@
 import React from 'react';
 import styles from './Subhead_Sm.module.scss';
 
-const Subhead_Sm = (props) => {
+const Subhead_Sm = ({article}) => {
   let content = '';
 
-  if (props.data) {
+  if (article) {
     content = (
       <>
         <img
           className={styles.subhead__img}
-          src={props.data.image}
+          src={article.image}
           alt='loading'
         />
-        <p className={styles.subhead__header}>{props.data.title}</p>
+        <p className={styles.subhead__header}>{article.title}</p>
         <p className={styles.subhead__author}>
-          {props.data.author ? `by ${props.data.author}` : ''}
+          {article.author ? `by ${article.author}` : ''}
         </p>
       </>
     );

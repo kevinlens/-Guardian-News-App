@@ -18,14 +18,16 @@
   }
   
   &__img{
-   height: 93%;
-   min-width: 5rem;
+   height: 7rem;
+   width: 7rem;
    display: flex;
    justify-self: end;
+   object-fit: cover;
   }
 
   &__author {
     font-size: 1.2rem;
     margin-top: -1rem;
+    font-family: ITC_Franklin;
   }
 }

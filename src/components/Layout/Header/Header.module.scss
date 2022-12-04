@@ -4,12 +4,12 @@
 .header {
   display: grid;
   grid-template-columns: max-content 1fr minmax(21rem, max-content);
-  grid-template-rows: 6rem;
+  grid-template-rows: 6.5rem;
   grid-column: header-start/header-end;
   grid-auto-flow: row;
   align-items: center;
 
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: bold;
   background-color: $color-primary-header;
   color: #ffffff;
@@ -27,11 +27,11 @@
     display: flex;
     gap: 2rem;
   }
-
   &__btn {
     display: flex;
     gap: 1rem;
-    justify-content: center;
+    justify-content: center; 
+    font-weight: 300;
     &__signIn{
       background-color:$color-primary-header;
       transition: all .2s;

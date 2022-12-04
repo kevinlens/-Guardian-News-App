@@ -9,12 +9,16 @@
   gap: 1rem;
   text-align: center;
   margin-top: 2rem;;
-
+  margin-bottom: 2rem;
+  @media only screen and (max-width: $bp-enormous){
+    display: none;
+  }
   h1{
     font-size: 4.5rem;
   }
 
   p{
+    font-family: ITC_Franklin;
     font-size: 2.5rem;
   }
   

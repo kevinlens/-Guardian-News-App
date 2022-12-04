@@ -49,14 +49,14 @@ const Most_Read = () => {
         <>
           <div className={styles.most_read__numberOne}>
             <h1 className={styles.most_read__numberOne_number}>1</h1>
-            <Subhead_Aside_Md data={data[0]}/>
+            <Subhead_Aside_Md article={data[0]}/>
             <div className={styles.most_read__numberOne__column_border_1}></div>
           </div>
 
           <div className={styles.most_read__otherNumbers}>
             <div className={styles.most_read__otherNumbers__2_3}>
               <h3 className={styles.most_read__otherNumbers__2_3__number}>2</h3>
-              <Subhead_Aside_Sm_HeadingOnly data={data[1]}/>
+              <Subhead_Aside_Sm_HeadingOnly article={data[1]}/>
 
               <div
                 className={styles.most_read__otherNumbers__separator_quarter}
@@ -65,7 +65,7 @@ const Most_Read = () => {
               </div>
 
               <h3 className={styles.most_read__otherNumbers__2_3__number}>3</h3>
-              <Subhead_Aside_Sm_HeadingOnly data={data[2]}/>
+              <Subhead_Aside_Sm_HeadingOnly article={data[2]}/>
             </div>
             <div
               className={styles.most_read__otherNumbers__column_border_2}
@@ -73,7 +73,7 @@ const Most_Read = () => {
 
             <div className={styles.most_read__otherNumbers__4_5}>
               <h3 className={styles.most_read__otherNumbers__4_5__number}>4</h3>
-              <Subhead_Aside_Sm_HeadingOnly data={data[3]}/>
+              <Subhead_Aside_Sm_HeadingOnly article={data[3]}/>
 
               <div
                 className={styles.most_read__otherNumbers__separator_quarter}
@@ -82,7 +82,7 @@ const Most_Read = () => {
               </div>
 
               <h3 className={styles.most_read__otherNumbers__4_5__number}>5</h3>
-              <Subhead_Aside_Sm_HeadingOnly data={data[4]}/>
+              <Subhead_Aside_Sm_HeadingOnly article={data[4]}/>
             </div>
           </div>
         </>

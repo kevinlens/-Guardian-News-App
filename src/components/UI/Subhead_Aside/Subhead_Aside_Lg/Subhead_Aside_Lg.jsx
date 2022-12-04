@@ -2,32 +2,33 @@ import React from 'react'
 import styles from './Subhead_Aside_Lg.module.scss'
 import Line_Separator from '../../Line_Separator/Line_Separator'
 
-const Subhead_Aside_Lg = (props) => {
+const Subhead_Aside_Lg = ({article, isMainArticle, topic}) => {
 
-    let isMainArticle = false;
+    let mainArticle = false;
     let hasTopic = false
-    if (props.isMainArticle) {
-      isMainArticle = true;
-    } else if (props.topic) {
+    if (isMainArticle) {
+      mainArticle = true;
+    }
+    if (topic) {
       hasTopic = true
     }
 
     let content = '';
 
-    if (props.data) {
+    if (article) {
       content = (
         <>
       <div className={styles.subhead__header}>
-        <h1 style={isMainArticle ? {fontSize: 40, fontWeight: 'bold'} : {}} >{props.data.title}</h1>
+        <h1 style={mainArticle ? {fontSize: 40 } : {}} >{article.title}</h1>
         
-        <p>The GOP’s disappointing midterm results spur some donors and party leaders to consider other 2024 candidates.</p>
-        <div className={styles.subhead__author}>By Ashley Parker, Josh Dawsey and Michael Scherer</div>
+        <p>{article.caption}</p>
+        <div className={styles.subhead__author}>By {article.author}</div>
       </div>
 
-      <img className={styles.subhead__img} src={props.data.image} alt='loading' />
+      <img className={styles.subhead__img} src={article.image} alt='loading' />
 
       <div className={styles.subhead__credit}>
-        <p>{props.data.photographer}</p>
+        <p>{article.photographer}</p>
       </div>
         </>
       );
@@ -36,12 +37,12 @@ const Subhead_Aside_Lg = (props) => {
 
   return (
     <div className={styles.subhead}>
-      <div className={styles.subhead__topic}>
+      <div className={styles.subhead__separator}>
       <Line_Separator />
       </div>
       {hasTopic && (
         <div className={styles.subhead__topic}>
-          <p>{props.topic}</p>
+          {topic}
         </div>
       )}
 

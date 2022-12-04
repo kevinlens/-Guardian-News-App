@@ -8,14 +8,14 @@
   grid-column: full-start / full-end;
   grid-row: 14/15;
 
-  &::before {
+  @media only screen and (max-width: $bp-enormous) {
+    grid-template-columns: 1fr 1fr;
+    grid-row: 18/19;
+  }
+
+  &__separator {
     display: grid;
-    grid-column: 1 / 9;
-    background-color: black;
-    height: .1rem;
-    width: 100%;
-    content: "";
-    display: block;
+    grid-column: 1/-1;
     margin-bottom: 4rem;
   }
 
@@ -24,5 +24,8 @@
   width: .12rem;
   height: 59%;
   margin-left:1.5rem;
+  @media only screen and (max-width: $bp-enormous) {
+    display: none;
+  }
   }
 }

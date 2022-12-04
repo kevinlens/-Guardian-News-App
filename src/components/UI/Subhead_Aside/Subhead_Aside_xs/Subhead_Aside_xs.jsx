@@ -3,21 +3,21 @@ import styles from './Subhead_Aside_xs.module.scss';
 import exampleImage from '../../../../assets/Images/imrs.jpg';
 import Line_Separator from '../../Line_Separator/Line_Separator';
 
-const Subhead_Aside_xs = (props) => {
+const Subhead_Aside_xs = ({ article }) => {
   let content = '';
 
-  if (props.data) {
+  if (article) {
     content = (
       <>
-        <p className={styles.subhead__header}>
-          {props.data.title}
-        </p>
+        <h3 className={styles.subhead__header}>
+          {article.title}
+          <p className={styles.subhead__header__author}>by {article.author}</p>
+        </h3>
         <img
           className={styles.subhead__img}
-          src={props.data.image}
+          src={article.image}
           alt='example image'
         />
-        <p className={styles.subhead__author}>by {props.data.author}</p>
       </>
     );
   }
@@ -25,9 +25,6 @@ const Subhead_Aside_xs = (props) => {
   return (
     <div className={styles.subhead}>
       {content}
-      <div className={styles.subhead__separator_lightgrey}>
-        <Line_Separator lineColor='#e9e9e9' />
-      </div>
     </div>
   );
 };

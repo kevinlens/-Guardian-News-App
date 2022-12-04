@@ -15,6 +15,12 @@ import Section4 from '../components/Layout/Section4/Section4';
 import Section5 from '../components/Layout/Section5/Section5';
 import NewsProvider from '../store/NewsProvider';
 
+//FONTS
+import '../assets/Fonts/PostoniWide-Regular.woff2'
+import '../assets/Fonts/PostoniWide-Bold.woff2'
+import '../assets/Fonts/ITC_Franklin-Light.woff2'
+import '../assets/Fonts/ITC_Franklin-Bold.woff2'
+
 function App() {
   return (
     <section className={styles.container}>
@@ -23,10 +29,7 @@ function App() {
         <LogoSection />
         <Front_Page />
         <HorizontalNewsofFour />
-        <Section2 />
-        <Section3 />
-        <Section4 />
-        <Section5 />
+
       </NewsProvider>
     </section>
   );
