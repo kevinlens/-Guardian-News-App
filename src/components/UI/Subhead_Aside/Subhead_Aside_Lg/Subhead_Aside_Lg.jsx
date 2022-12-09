@@ -18,8 +18,8 @@ const Subhead_Aside_Lg = ({article, isMainArticle, topic}) => {
     if (article) {
       content = (
         <>
-      <div className={styles.subhead__header}>
-        <h1 style={mainArticle ? {fontSize: 40 } : {}} >{article.title}</h1>
+      <div>
+        <h1 className={styles.subhead__header} style={mainArticle ? {fontSize: 40 } : {}} >{article.title}</h1>
         
         <p>{article.caption}</p>
         <div className={styles.subhead__author}>By {article.author}</div>
@@ -38,7 +38,7 @@ const Subhead_Aside_Lg = ({article, isMainArticle, topic}) => {
   return (
     <div className={styles.subhead}>
       <div className={styles.subhead__separator}>
-      <Line_Separator />
+        <Line_Separator />
       </div>
       {hasTopic && (
         <div className={styles.subhead__topic}>
@@ -48,6 +48,7 @@ const Subhead_Aside_Lg = ({article, isMainArticle, topic}) => {
 
       <div className={styles.subhead__filler}></div>
         {content}
+        
     </div>
   )
 }

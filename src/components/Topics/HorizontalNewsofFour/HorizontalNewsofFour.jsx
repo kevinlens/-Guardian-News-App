@@ -43,15 +43,12 @@ const HorizontalNewsofFour = () => {
         <Line_Separator />
       </div>
       {!isLoading && !error && data && (
-        <>
+        <div className={styles.horizontalNewsofFour__articles}>
           <Filler_Subhead_Aside_xs article={data[0]} />
-          <div className={styles.horizontalNewsofFour__column_border}></div>
           <Filler_Subhead_Aside_xs article={data[1]} />
-          <div className={styles.horizontalNewsofFour__column_border}></div>
           <Filler_Subhead_Aside_xs article={data[2]} />
-          <div className={styles.horizontalNewsofFour__column_border}></div>
           <Filler_Subhead_Aside_xs article={data[3]} />
-        </>
+        </div>
       )}
       {status}
     </div>

@@ -20,6 +20,15 @@
     list-style: none;
     justify-content: start;
     gap: 3.5rem;
+    @media only screen and (max-width: $bp-largest){ 
+      display: none;
+    }
+    @media only screen and (max-width: $bp-large){ 
+      display: none;
+    }
+    @media only screen and (max-width: $bp-small){ 
+    display: none;
+    }
   }
 
   &__icons {
@@ -41,4 +50,6 @@
     }
     
   }
+
+  
 }

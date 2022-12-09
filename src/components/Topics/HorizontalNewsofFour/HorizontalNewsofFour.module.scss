@@ -3,29 +3,69 @@
 
 .horizontalNewsofFour {
   display: grid;
-  grid-template-columns: 1fr 3rem 1fr 3rem 1fr 3rem 1fr;
-  grid-template-rows: min-content;
   grid-column: full-start / full-end;
-  grid-row: 14/15;
+  grid-row: 15/16;
+
+  &__articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column: 1/-1;
+    column-gap: 3.5rem;
+    //vertical line separator is non-existent for the last article
+    div:not(:nth-last-of-type(-n + 1)) {
+      ::after {
+        content: '';
+        position: absolute;
+        height: 7rem;
+        width: 0.1rem;
+        background: black;
+        top: 0;
+        right: -1.8rem;
+        @media only screen and (max-width: $bp-largest) {
+          display: none;
+        }
+      }
+    }
+
+    @media only screen and (max-width: $bp-largest) {
+      grid-template-columns: 1fr 1fr;
+      //articles multiples of 2 will not after a vertical separator line pseudo element
+      div:first-child {
+        &::after {
+          content: '';
+          position: absolute;
+          height: 20.8rem;
+          width: 0.1rem;
+          background: black;
+          top: 0;
+          right: -1.8rem;
+        }
+      }
+
+      //horizontal line separator is non-existent for the last two articles
+      div:not(:nth-last-of-type(-n + 2)) {
+        border-bottom: 1px solid black;
+      }
+    }
+  }
 
   @media only screen and (max-width: $bp-enormous) {
     grid-template-columns: 1fr 1fr;
     grid-row: 18/19;
   }
 
+  @media only screen and (max-width: $bp-largest) {
+    grid-row: 18/20;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    display: none;
+  }
+
   &__separator {
     display: grid;
     grid-column: 1/-1;
-    margin-bottom: 4rem;
-  }
 
-  &__column_border {
-  background-color: #666666;
-  width: .12rem;
-  height: 59%;
-  margin-left:1.5rem;
-  @media only screen and (max-width: $bp-enormous) {
-    display: none;
-  }
   }
 }

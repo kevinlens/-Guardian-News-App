@@ -5,16 +5,17 @@
   display: grid;
   grid-template-columns: 75% 25%;
   grid-template-rows: 7rem 2rem;
-  
   margin-bottom: 2rem;
   position: relative;
-
   justify-content: space-between;
 
   &__header {
     font-size: 1.6rem;
     text-align: left;
-    width: 95%;
+    width: 85%;
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 1.9rem;
+    }
   }
   
   &__img{
@@ -23,6 +24,10 @@
    display: flex;
    justify-self: end;
    object-fit: cover;
+   @media only screen and (max-width: $bp-largest) {
+    height: 8rem;
+    width: 8rem;
+    }
   }
 
   &__author {
@@ -30,4 +35,5 @@
     margin-top: -1rem;
     font-family: ITC_Franklin;
   }
+
 }

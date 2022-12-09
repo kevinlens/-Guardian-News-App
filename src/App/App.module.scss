@@ -37,4 +37,12 @@
     grid-template-columns: [header-start] 1fr [full-start] 32rem [logo-start] repeat(2,  15.5rem) [logo-end] 32rem [full-end] 1fr [header-end];
     grid-template-rows: 6.5rem min-content min-content 8rem repeat(40, 14rem);
   }
+  @media only screen and (max-width: $bp-medium){
+    grid-template-columns: [header-start] 1fr [full-start] 32rem [logo-start] 15.5rem [logo-end] 32rem [full-end] 1fr [header-end];
+    grid-template-rows: 6.5rem min-content min-content 8rem repeat(40, 14rem);
+  }
+  @media only screen and (max-width: $bp-small){
+    grid-template-columns: [header-start] 2rem [full-start] minmax(10rem,80rem) [full-end] 2rem [header-end];
+    grid-template-rows: 6.5rem min-content min-content 8rem repeat(40, 14rem);
+  }
 }

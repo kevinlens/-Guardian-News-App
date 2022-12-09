@@ -51,6 +51,7 @@ const SiliconValley = () => {
         <Subhead_Aside_xs article={data[4]} />
         <Subhead_Aside_xs article={data[5]} />
         <Subhead_Aside_xs article={data[6]} />
+        <Subhead_Aside_xs article={data[7]} />
       </div>
       }
 

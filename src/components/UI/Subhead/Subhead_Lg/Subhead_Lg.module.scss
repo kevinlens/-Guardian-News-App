@@ -6,26 +6,47 @@
   justify-content: start; 
   margin-bottom: 2rem;
 
+  @media only screen and (max-width: $bp-small){
+    margin-bottom: 3rem;
+
+  }
+
   p{
+    font-size: 2rem;
     margin-top: 1rem;
   }
+  
   &__header {
     font-size: 2rem;
     font-weight: bold;
     text-align: left;
     width: 95%;
-    
+    letter-spacing: .6px;
+    @media only screen and (max-width: $bp-small){ 
+      font-size: 3.5rem;
+      
+    }
   }
   
   &__img{
     width: 62.8rem;
     height: 41.9rem;
     object-fit: cover;
+    @media only screen and (max-width: $bp-small){ 
+      width: 100%;
+      height: auto;
+      max-height: 55rem;
+      object-fit: contain;
+    }
   }
 
   &__author {
     font-size: 1.2rem;
     margin-top: -1rem;
     font-family: ITC_Franklin;
+    @media only screen and (max-width: $bp-small){ 
+      font-size: 1.7rem;
+      color: #666666;
+    }
   }
 }

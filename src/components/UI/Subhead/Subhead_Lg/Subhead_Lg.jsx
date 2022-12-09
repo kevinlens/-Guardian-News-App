@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Subhead_Lg.module.scss';
-
 const Subhead_Lg = ({article}) => {
 
   let content = '';
@@ -23,6 +22,7 @@ const Subhead_Lg = ({article}) => {
   return (
     <div className={styles.subhead}>
       {content}
+           
     </div>
   );
 };

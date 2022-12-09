@@ -29,6 +29,7 @@ function App() {
         <LogoSection />
         <Front_Page />
         <HorizontalNewsofFour />
+        <Section2 />
 
       </NewsProvider>
     </section>

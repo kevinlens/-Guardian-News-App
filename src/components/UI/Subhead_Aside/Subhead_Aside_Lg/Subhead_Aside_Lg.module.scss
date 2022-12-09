@@ -9,12 +9,13 @@
 
   font-size: 1.7rem;
 
-  h1 {
+  &__header {
     font-family: PostoniWide-Bold;
     font-size: 3.5rem;
     font-weight: 400;
     margin-bottom: 1rem;
     width: 95%;
+
   }
 
   p {
@@ -32,8 +33,8 @@
   &__topic{
     display: grid;
     grid-column: 1/9;
-    height: 1rem;
-    font-size: 2rem;
+    //set to em because px and rem seems to be messing with the width of line separator
+    font-size: 1.2em;
     text-transform: uppercase;
     font-family: ITC_Franklin-Bold;
     margin-top: 1.5rem;

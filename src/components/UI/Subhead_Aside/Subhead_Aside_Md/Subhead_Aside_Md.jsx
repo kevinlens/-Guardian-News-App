@@ -1,7 +1,6 @@
 import React from 'react'
 
 import styles from './Subhead_Aside_Md.module.scss'
-import exampleImage from '../../../../assets/Images/imrs7.jpg'
 
 const Subhead_Aside_Md = ({article}) => {
 

@@ -5,8 +5,22 @@
 .Hot_News{
   display: grid;
   grid-column: 1 / 9;
+  
   @media only screen and (max-width: $bp-enormous){
     grid-column: full-start / full-end;
+    
   }
+
+  @media only screen and (max-width: $bp-small){
+    grid-column: full-start / full-end;
+    font-size: 2rem;
+  }
+
+  &__separator {
+    display: grid;
+    grid-column: 1/-1;
+    margin-bottom: 2.5rem;
+  }
+
 }
 
