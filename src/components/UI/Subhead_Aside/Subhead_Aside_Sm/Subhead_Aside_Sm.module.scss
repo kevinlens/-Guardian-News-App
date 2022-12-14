@@ -4,7 +4,7 @@
 .subhead {
   display: grid;
   grid-template-columns: 51% 49%;
-  grid-template-rows: 7rem 2rem;
+  grid-template-rows: 1fr;
   padding-right:.5rem;
   justify-content: start;
 
@@ -13,24 +13,43 @@
   h3{
     font-size: 2rem;
     font-weight: bold;
+    margin-bottom: 1rem;
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 2.9rem;
+      
+    }
   }
 
   &__header {
     font-size: 1.6rem;
     text-align: left;
     width: 95%;
-    
   }
   
   &__img{
     width: 100%;
     height: 15.5rem;
     object-fit: cover;
+
+    @media only screen and (max-width: $bp-largest){
+      min-height: 6.4rem;
+      min-width: 6.4rem;
+    }
   }
 
   &__author {
+    color:#666666;
     font-size: 1.2rem;
     font-family: ITC_Franklin;
-}
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 1.5rem;
+      
+    }
+  }
+  @media only screen and (max-width: $bp-enormous){
+    display: grid;
+    grid-template-columns: 50% 51%;
+
+  }
 
 }

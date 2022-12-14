@@ -11,6 +11,11 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column: 1/-1;
     column-gap: 3.5rem;
+
+    @media only screen and (max-width: $bp-enormous) {
+      margin-top: 3rem;
+    }
+
     //vertical line separator is non-existent for the last article
     div:not(:nth-last-of-type(-n + 1)) {
       ::after {
@@ -49,9 +54,10 @@
     }
   }
 
+  //DO NOT MOVE THE MEDIA QUERIES AROUND
+
   @media only screen and (max-width: $bp-enormous) {
-    grid-template-columns: 1fr 1fr;
-    grid-row: 18/19;
+    margin-top: 4rem;
   }
 
   @media only screen and (max-width: $bp-largest) {
@@ -66,6 +72,5 @@
   &__separator {
     display: grid;
     grid-column: 1/-1;
-
   }
 }

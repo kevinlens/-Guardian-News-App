@@ -36,8 +36,8 @@ const Headline = () => {
       <Line_Separator />
       {!isLoading && !error && data && (
         <>
-          <h1>{data[3].title}</h1>
-          <p>{data[3].caption}</p>
+          <h1>{data[0].title}</h1>
+          <p>{data[0].caption}</p>
         </>
       )}
       {status}

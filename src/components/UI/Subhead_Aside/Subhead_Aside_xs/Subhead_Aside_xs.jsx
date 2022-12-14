@@ -1,7 +1,5 @@
 import React from 'react';
 import styles from './Subhead_Aside_xs.module.scss';
-import exampleImage from '../../../../assets/Images/imrs.jpg';
-import Line_Separator from '../../Line_Separator/Line_Separator';
 
 const Subhead_Aside_xs = ({ article }) => {
   let content = '';

@@ -17,17 +17,23 @@ const useFetch = () => {
       }
 
       const data = await response.json();
+
       const newsData = data.response.results.map((newsData) => {
+        
         let author = '';
         if (newsData.tags.length >= 1) {
           author = newsData.tags[0].webTitle;
         }
+
         let primaryPhoto, primaryCaption, photographer = '';
         
-        if(newsData.blocks.main){
+        //trying to get the captions and photographer
+        if(newsData.blocks.main && newsData.blocks.main.elements[0].imageTypeData){
           primaryCaption = newsData.blocks.main.elements[0].imageTypeData.caption;
           photographer = newsData.blocks.main.elements[0].imageTypeData.credit;
         }
+
+        //getting biggest photo possible for more pixels
         if (!newsData.blocks.main) {
           primaryPhoto = newsData.fields.thumbnail;
         } else if (newsData.blocks.main.elements[0].assets[5]) {
@@ -37,6 +43,7 @@ const useFetch = () => {
         } else if (newsData.blocks.main.elements[0].assets[3]) {
           primaryPhoto = newsData.blocks.main.elements[0].assets[3].file;
         }
+        //every 'data' object comes back with a set of these custom properties
         return {
           id: newsData.id,
           title: newsData.fields.headline,

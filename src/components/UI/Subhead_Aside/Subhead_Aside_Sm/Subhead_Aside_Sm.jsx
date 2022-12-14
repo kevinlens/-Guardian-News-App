@@ -8,9 +8,11 @@ const Subhead_Aside_Sm = ({article}) => {
 if (article) {
   content = (
     <>
-      <h3 className={styles.subhead__header}>{article.title}</h3>
+      <div>
+        <h3 className={styles.subhead__header}>{article.title}</h3>
+        <p className={styles.subhead__author}>by {article.author}</p>
+      </div>
       <img className={styles.subhead__img} src={article.image} alt='example image' />
-      <p className={styles.subhead__author}>by {article.author}</p>
     </>
   );
 }

@@ -1,11 +1,12 @@
 @import '../../../styles/variables';
 @import '../../../styles/typography';
 
-.section2{
+.section2 {
   display: grid;
   grid-template-columns: 80% 21%;
   grid-column: full-start/full-end;
   grid-row: 16/17;
+
   &__two_articles {
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
@@ -21,25 +22,35 @@
       content: '';
       position: absolute;
       height: 100rem;
-      width: .1rem;
+      width: 0.1rem;
       background: #e9e9e9;
       top: 0rem;
       left: 1.5rem;
     }
   }
 
+  &__enormousWidth {
+    display: none;
+  }
+
+  &__mediumWidth {
+    display: none;
+  }
+
   &__column_border {
     background-color: black;
-    width: .12rem;
+    width: 0.12rem;
     height: 15.5rem;
     margin: 0 1.5rem 0 1rem;
-    }
+  }
 
   &__separator_full {
     display: grid;
     grid-column: 1/3;
     width: 100%;
     margin-bottom: 2rem;
+    
+    
   }
 
   &__separator_quarter {
@@ -47,4 +58,99 @@
     margin-bottom: 2rem;
   }
 
+  @media only screen and (max-width: $bp-enormous) {
+    grid-row: 16/17;
+    margin-top: 10rem;
+    &__fullWidth {
+      display: none;
+    }
+
+    &__enormousWidth {
+      display: grid;
+      grid-template-columns: 48% 48%;
+      grid-column: 1/3;
+      column-gap: 3rem;
+      position: relative;
+      //vertical line separator, first three articles possesses a line
+      div:nth-child(odd) {
+        &::after {
+          content: '';
+          position: absolute;
+          height: 85rem;
+          width: 1px;
+          top: 3rem;
+          left: 51rem;
+          background: #e9e9e9;
+        }
+      }
+
+      //horizontal line separator is non-existent for the last two articles
+      div:not(:nth-last-of-type(-n + 2)):not(:first-child) {
+        border-bottom: 1px solid #e9e9e9;
+        padding-bottom: 5rem;
+        
+      }
+    }
+
+    &__separator_full {
+      display: grid;
+      grid-column: 1/3;
+      width: 99%;
+      margin-bottom: 3rem;
+    }
+  }
+
+  @media only screen and (max-width: $bp-largest) {
+    grid-row: 20/21;
+    &__enormousWidth {
+      position: relative;
+      //vertical line separator, first three articles possesses a line
+      div:nth-child(odd) {
+        &::after {
+          content: '';
+          position: absolute;
+          height: 103rem;
+          width: 1px;
+          top: 3rem;
+          left: 47.5rem;
+          background: #e9e9e9;
+        }
+      }
+    }
+
+    &__mediumWidth {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-row: 20/22;
+    //horizontal line separator is non-existent for the last two articles
+    div:not(:first-child){
+      border-bottom: 1px solid #e9e9e9;
+      padding-bottom:2rem;
+      padding-top: 2rem;
+    }
+    &__enormousWidth {
+      display: none;
+    }
+    &__mediumWidth {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column: 1/-1;
+    }
+  }
+  @media only screen and (max-width: $bp-small) {
+    grid-row: 26/27;
+    margin-top: 60%;
+
+    &__enormousWidth {
+      display: none;
+    }
+    &__mediumWidth {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column: 1/-1;
+    }
+  }
 }
