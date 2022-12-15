@@ -1,5 +1,32 @@
+@import '../../../styles/variables';
+@import '../../../styles/typography';
+
 .section3 {
    display: grid;
    grid-column: full-start / full-end;
-   grid-row: 23/24;
+   grid-row: 25/26;
+
+   @media only screen and (max-width: $bp-enormous) {
+      display: grid;
+      grid-row: 24/25;
+   }
+
+   @media only screen and (max-width: $bp-largest) {
+      display: grid;
+      grid-row: 29/30;
+   }
+
+   @media only screen and (max-width: $bp-medium) {
+      display: grid;
+      grid-row: 33/34;
+   }
+   @media only screen and (max-width: $bp-small) {
+      display: grid;
+      grid-row: 41/42;
+   }
+   @media only screen and (max-width: $bp-smallest) {
+      display: grid;
+      grid-row: 38/39;
+   }
 }
+

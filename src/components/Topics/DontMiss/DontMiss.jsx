@@ -13,6 +13,7 @@ import styles from './DontMiss.module.scss';
 
 //COMPONENTS
 import Subhead_Sm from '../../UI/Subhead/Subhead_Sm/Subhead_Sm';
+import Subhead_Lg from '../../UI/Subhead/Subhead_Lg/Subhead_Lg';
 import Line_Separator from '../../UI/Line_Separator/Line_Separator';
 
 const DontMiss = () => {
@@ -36,23 +37,37 @@ const DontMiss = () => {
     status = <p>{error}</p>;
   }
 
+  let fullSizedWidthContent = '';
+  let largestSizedWidthContent = '';
+  if (!isLoading && !error && data) {
+    fullSizedWidthContent = (
+      <>
+        <div className={styles.dontMiss__separator_full}>
+          <Line_Separator />
+        </div>
+        <div className={styles.dontMiss__topic}>Don't Miss</div>
+        <div className={styles.dontMiss__fullSized_articles}>
+          <Subhead_Sm article={data[0]} />
+          <Subhead_Sm article={data[1]} />
+          <Subhead_Sm article={data[2]} />
+          <Subhead_Sm article={data[3]} />
+        </div>
+      </>
+    );
+    largestSizedWidthContent = (
+      <div className={styles.dontMiss__largestSized_articles}>
+        <Subhead_Lg article={data[0]} />
+        <Subhead_Lg article={data[1]} />
+        <Subhead_Lg article={data[2]} />
+        <Subhead_Lg article={data[5]} />
+      </div>
+    );
+  }
+
   return (
     <div className={styles.dontMiss}>
-      <div className={styles.dontMiss__separator_full}>
-        <Line_Separator />
-      </div>
-      <div className={styles.dontMiss__topic}>Don't Miss</div>
-      {!isLoading && !error && data && (
-        <>
-          <Subhead_Sm article={data[0]}/>
-          <div className={styles.dontMiss__column_border}></div>
-          <Subhead_Sm article={data[1]}/>
-          <div className={styles.dontMiss__column_border}></div>
-          <Subhead_Sm article={data[2]}/>
-          <div className={styles.dontMiss__column_border}></div>
-          <Subhead_Sm article={data[3]}/>
-        </>
-      )}
+      {fullSizedWidthContent}
+      {largestSizedWidthContent}
     </div>
   );
 };

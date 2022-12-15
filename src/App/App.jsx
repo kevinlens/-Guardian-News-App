@@ -30,7 +30,7 @@ function App() {
         <Front_Page />
         <HorizontalNewsofFour />
         <Section2 />
-
+        <Section3 />
       </NewsProvider>
     </section>
   );

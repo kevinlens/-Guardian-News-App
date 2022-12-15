@@ -18,8 +18,13 @@
   }
   
   &__img{
+    max-width: 30rem;
     height: 20rem;
     object-fit: cover;
+    @media only screen and (max-width: $bp-enormous) {
+      max-width: 23.5rem;
+      height: 20rem;
+    }
   }
 
   &__author {
