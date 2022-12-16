@@ -109,7 +109,7 @@
         &::after {
           content: '';
           position: absolute;
-          height: 103rem;
+          height: 100rem;
           width: 1px;
           top: 3rem;
           left: 47.5rem;
@@ -120,6 +120,10 @@
 
     &__mediumWidth {
       display: none;
+    }
+
+    &__separator_full {
+      width: 100%;
     }
   }
 

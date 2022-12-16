@@ -1,6 +1,85 @@
+@import '../../../styles/variables';
+@import '../../../styles/typography';
+
 .most_read {
   display: grid;
-  grid-template-columns: minmax(64.5rem, min-content) minmax(64.5rem, min-content);
+  grid-template-columns: minmax(64.5rem, min-content) minmax(
+      64.5rem,
+      min-content
+    );
+
+  @media only screen and (max-width: $bp-enormous) {
+    grid-template-columns: 50% 50%;
+  }
+
+  &__articles {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content min-content min-content min-content;
+    grid-column: 1/3;
+    //horizontal line separator is non-existent for the last two articles
+    div:not(:last-child):not(:first-child) {
+      border-bottom: 1px solid black;
+      margin-bottom: 2.2rem;
+    }
+    &__topic {
+      display: grid;
+      grid-row: 1/2;
+    }
+
+    &__1 {
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      grid-row: 2/3;
+      h2 {
+        font-size: 3rem;
+        margin-right: 2rem;
+      }
+      p {
+        font-size: 3rem;
+      }
+    }
+
+    &__2 {
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      grid-row: 3/4;
+      h2 {
+        font-size: 3rem;
+        margin-right: 2rem;
+      }
+    }
+
+    &__3 {
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      grid-row: 4/5;
+      h2 {
+        font-size: 3rem;
+        margin-right: 2rem;
+      }
+    }
+
+    &__4 {
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      grid-row: 5/6;
+      h2 {
+        font-size: 3rem;
+        margin-right: 2rem;
+      }
+    }
+
+    &__5 {
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      grid-row: 6/7;
+      h2 {
+        font-size: 3rem;
+        margin-right: 2rem;
+      }
+    }
+  }
 
   &__separator_full {
     display: grid;
@@ -15,16 +94,21 @@
     font-size: 1.55rem;
     font-weight: bold;
     margin-bottom: 1.75rem;
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 1.8rem;
+      border-top: 1px solid black;
+      padding-top: 2rem;
+    }
   }
 
   &__numberOne {
     display: grid;
     grid-template-columns: 4rem 1fr min-content;
-    &__column_border_1{
-      background-color:#e9e9e9;
-      width: .12rem;
+    &__column_border_1 {
+      background-color: #e9e9e9;
+      width: 0.12rem;
       height: 95%;
-      margin-left:2rem;
+      margin-left: 2rem;
     }
     &_number {
       display: grid;
@@ -35,33 +119,32 @@
         content: '';
         position: absolute;
         width: 35%;
-        margin-left:.6rem;
+        margin-left: 0.02rem;
         height: 1.3rem;
-        top:3rem;
+        top: 3rem;
         border-bottom: 1px solid black;
       }
     }
   }
-  
+
   &__otherNumbers {
     display: grid;
     grid-template-columns: 1fr 1.75rem min-content;
 
     &__column_border_2 {
-      background-color:#e9e9e9;
-      width: .12rem;
+      background-color: #e9e9e9;
+      width: 0.12rem;
       height: 95%;
-      margin-left: .6rem;
-
+      margin-left: 0.6rem;
     }
-    
+
     &__2_3 {
       display: grid;
       grid-template-columns: 3rem 1fr;
       margin-right: 2rem;
       margin-left: 1.5rem;
 
-      h3{
+      h3 {
         display: grid;
         grid-column: 1/2;
       }
@@ -80,7 +163,7 @@
       display: grid;
       grid-template-columns: 3rem 1fr;
       margin-right: 2rem;
-      h3{
+      h3 {
         display: grid;
         grid-column: 1/2;
       }

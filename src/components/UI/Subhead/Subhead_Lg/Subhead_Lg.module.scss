@@ -7,16 +7,22 @@
   margin-bottom: 2rem;
   
   &__header {
+    font-size: 3rem;
     font-weight: bold;
     text-align: left;
     width: 95%;
     letter-spacing: .6px;
+    margin-top: 1.5rem;
     @media only screen and (max-width: $bp-small){ 
       font-size: 3.5rem;
       
     }
     @media only screen and (max-width: $bp-largest) {
       font-size: 2.5rem;
+    }
+
+    @media only screen and (max-width: $bp-enormous) {
+      margin-top: .5rem;
     }
   }
   
@@ -30,7 +36,7 @@
       color: #666666;
     }
     @media only screen and (max-width: $bp-largest) {
-      font-size: 1.4rem;
+      font-size: 1.4rem!important;
     }
   }
   
@@ -38,16 +44,17 @@
     width: 62.8rem;
     height: 41.9rem;
     object-fit: cover;
+    
     @media only screen and (max-width: $bp-medium){ 
       
     }
     @media only screen and (max-width: $bp-enormous) {
       width: 100%;
       height: auto;
-      max-height: 55rem;
+      // max-height: 55rem;
       object-fit: contain;
       margin-bottom: 1rem;
-  }
+    }
 }
 
 

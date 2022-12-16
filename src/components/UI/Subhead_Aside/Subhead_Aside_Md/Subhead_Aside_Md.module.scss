@@ -23,6 +23,9 @@
     width: 29.8rem;
     height: 19.9rem;
     object-fit: cover;
+    @media only screen and (max-width: $bp-enormous) {
+      width: 20rem;
+    }
   }
 
 

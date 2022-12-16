@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 //CUSTOM HOOKS
 import useFetch from '../../../custom-hooks/useFetch';
+import useMediaQuery from '../../../custom-hooks/useMediaQuery';
 
 //CONTEXT
 import { useContext } from 'react';
@@ -18,6 +19,8 @@ import Subhead_Sm from '../../UI/Subhead/Subhead_Sm/Subhead_Sm';
 
 const Politics = () => {
   const { data, isLoading, error, fetchNow } = useFetch();
+  const isDesktopLargest = useMediaQuery('(max-width: 75em)');
+
   const newsCtx = useContext(NewsContext);
   useEffect(() => {
     fetchNow({
@@ -37,6 +40,42 @@ const Politics = () => {
     status = <p>{error}</p>;
   }
 
+  let block2 = '';
+  let block3 = '';
+  if (!isLoading && !error && data && !isDesktopLargest) {
+    block2 = (
+      <div className={styles.politics__block_2}>
+        <div className={styles.politics__block_2__row_1}>
+          <Subhead_Sm article={data[1]} />
+
+          <div className={styles.politics__separator_quarter}>
+            <Line_Separator lineColor='#e9e9e9' />
+          </div>
+          <Subhead_Sm article={data[2]} />
+        </div>
+        <div className={styles.politics__column_border_2}></div>
+        <div className={styles.politics__block_2__row_2}>
+          <Subhead_Sm article={data[5]} />
+
+          <div className={styles.politics__separator_quarter}>
+            <Line_Separator lineColor='#e9e9e9' />
+          </div>
+          <Subhead_Sm article={data[4]} />
+        </div>
+      </div>
+    );
+  }
+  if (!isLoading && !error && data && isDesktopLargest) {
+    block3 = (
+      <div className={styles.politics__block_3}>
+        <Subhead_Lg article={data[1]} />
+        <Subhead_Lg article={data[2]} />
+        <Subhead_Lg article={data[3]} />
+        <Subhead_Lg article={data[4]} />
+      </div>
+    );
+  }
+
   return (
     <div className={styles.politics}>
       <div className={styles.politics__separator_full}>
@@ -51,25 +90,8 @@ const Politics = () => {
             <div className={styles.politics__column_border_1}></div>
           </div>
 
-          <div className={styles.politics__block_2}>
-            <div className={styles.politics__block_2__row_1}>
-              <Subhead_Sm article={data[1]} />
-
-              <div className={styles.politics__separator_quarter}>
-                <Line_Separator lineColor='#e9e9e9' />
-              </div>
-              <Subhead_Sm article={data[2]} />
-            </div>
-            <div className={styles.politics__column_border_2}></div>
-            <div className={styles.politics__block_2__row_2}>
-              <Subhead_Sm article={data[5]} />
-
-              <div className={styles.politics__separator_quarter}>
-                <Line_Separator lineColor='#e9e9e9' />
-              </div>
-              <Subhead_Sm article={data[4]} />
-            </div>
-          </div>
+          {block2}
+          {block3}
         </>
       )}
       {status}

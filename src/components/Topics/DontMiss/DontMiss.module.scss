@@ -23,7 +23,7 @@
     @media only screen and (max-width: $bp-largest) {
       display: grid;
       column-gap: 3.5rem;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 49% 48%;
       grid-column: 1/-1;
 
     }
@@ -51,7 +51,7 @@
       width: 100%;
     }
     @media only screen and (max-width: $bp-largest) {
-      width: 99.5%;
+      width: 100%;
     }
   }
 

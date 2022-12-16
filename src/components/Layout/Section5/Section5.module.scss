@@ -1,5 +1,26 @@
+@import '../../../styles/variables';
+@import '../../../styles/typography';
+
 .section5 {
   display: grid;
   grid-column: full-start / full-end;
-  grid-row: 31/32;
+  grid-row: 34/35;
+  @media only screen and (max-width: $bp-enormous) {
+    grid-row: 33/34;
+  }
+  @media only screen and (max-width: $bp-largest) {
+    grid-row: 48/49;
+  }
+  @media only screen and (max-width: $bp-large) {
+    grid-row: 48/49;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    grid-row: 50/51;
+  }
+  @media only screen and (max-width: $bp-small) {
+    grid-row: 58/59;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    grid-row: 53/54;
+  }
 }
