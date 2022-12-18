@@ -1,6 +1,6 @@
 //HOOKS
 import React, { useState, useEffect } from 'react';
-
+import { Link } from "react-router-dom"
 //CUSTOM HOOKS
 import useFetch from '../../../custom-hooks/useFetch';
 
@@ -30,9 +30,14 @@ const Headline = () => {
   } else if (error) {
     status = <p>{error}</p>;
   }
+  let articleInfo = '';
+  if(!isLoading && !error && data){
+    articleInfo = data[0];
+  }
+
 
   return (
-    <div className={styles.headline}>
+    <Link to="/summary" className={styles.headline} state={{ data: articleInfo }}>
       <Line_Separator />
       {!isLoading && !error && data && (
         <>
@@ -41,7 +46,7 @@ const Headline = () => {
         </>
       )}
       {status}
-    </div>
+    </Link>
   );
 };
 

@@ -2,24 +2,34 @@
 @import '../../../styles/typography';
 
 .headline {
-
   display: grid;
   grid-column: 1 / -1;
   grid-row: 1/3;
   gap: 1rem;
   text-align: center;
-  margin-top: 2rem;;
+  text-decoration: none;
+  margin-top: 2rem;
   margin-bottom: 2rem;
-  @media only screen and (max-width: $bp-enormous){
+
+  &:focus,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+    color:black;
+  }
+  &:hover {
+    color:#666666;
+  }
+  @media only screen and (max-width: $bp-enormous) {
     display: none;
   }
-  h1{
+  h1 {
     font-size: 4.5rem;
   }
 
-  p{
+  p {
     font-family: ITC_Franklin;
     font-size: 2.5rem;
   }
-  
 }

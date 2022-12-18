@@ -1,7 +1,7 @@
 import styles from './Header.module.scss';
 import NotificationIcon from '../../../assets/SVG/NotificationIcon';
 import MenuIcon from '../../../assets/SVG/MenuIcon';
-
+import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <header className={styles.header}>
@@ -11,16 +11,13 @@ const Header = () => {
       </div>
 
       <ul className={styles.header__content}>
-        <li>Midterm Elections 2022</li>
-        <li>Politics</li>
-        <li>Opinions</li>
-        <li>War in Ukraine</li>
-        <li>Well+Being</li>
-        <li>Tech</li>
-        <li>Lifestyle</li>
-        <li>World</li>
-        <li>D.C, Md. & Va</li>
-        <li>Sports</li>
+        <Link to='/'>Politics</Link>
+        <Link to='/'>Opinions</Link>
+        <Link to='/'>War in Ukraine</Link>
+        <Link to='/'>Well+Being</Link>
+        <Link to='/'>Tech</Link>
+        <Link to='/'>Lifestyle</Link>
+        <Link to='/'>World</Link>
       </ul>
 
       <div className={styles.header__btn}>

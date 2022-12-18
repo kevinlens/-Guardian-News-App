@@ -14,20 +14,31 @@
   background-color: $color-primary-header;
   color: #ffffff;
 
+  @media only screen and (max-width: $bp-largest) {
+    grid-template-columns: max-content 1fr;
+  }
   &__content {
     display: flex;
 
     list-style: none;
     justify-content: start;
     gap: 3.5rem;
-    @media only screen and (max-width: $bp-largest){ 
+
+    a:focus,
+    a:visited,
+    a:link,
+    a:active {
+      text-decoration: none;
+      color: white;
+    }
+    @media only screen and (max-width: $bp-largest) {
       display: none;
     }
-    @media only screen and (max-width: $bp-large){ 
+    @media only screen and (max-width: $bp-large) {
       display: none;
     }
-    @media only screen and (max-width: $bp-small){ 
-    display: none;
+    @media only screen and (max-width: $bp-small) {
+      display: none;
     }
   }
 
@@ -39,17 +50,18 @@
   &__btn {
     display: flex;
     gap: 1rem;
-    justify-content: center; 
+    justify-content: center;
     font-weight: 300;
-    &__signIn{
-      background-color:$color-primary-header;
-      transition: all .2s;
+    &__signIn {
+      background-color: $color-primary-header;
+      transition: all 0.2s;
       &:hover {
         background-color: #373c3e;
+      }
     }
+    @media only screen and (max-width: $bp-largest) {
+      justify-content: flex-end;
+      margin-right: 2rem;
     }
-    
   }
-
-  
 }

@@ -49,7 +49,8 @@ const useFetch = () => {
           title: newsData.fields.headline,
           caption: primaryCaption,
           author: author,
-          body: newsData.blocks.body[0].bodyTextSummary,
+          dateCreated: newsData.blocks.main.createdDate,
+          body: newsData.fields.body,
           thumbnail: newsData.fields.thumbnail,
           image: primaryPhoto,
           photographer: photographer

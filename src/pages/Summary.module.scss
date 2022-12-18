@@ -1,0 +1,43 @@
+.summary {
+  display: grid;
+  grid-column: full-start/logo-end;
+
+  h1 {
+    font-size: 5.25rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 2.3rem;
+    line-height: 3.75rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__img {
+    display: grid;
+    grid-column: 1/-1;
+    width: 84.5rem;
+    height: 57.5rem;
+    margin-bottom: 3rem;
+  }
+
+  aside {
+    display: none;
+  }
+
+  &__caption {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  &__author {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  &__time {
+    color: #666666;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+  }
+}

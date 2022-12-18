@@ -17,14 +17,19 @@ import Line_Separator from '../../UI/Line_Separator/Line_Separator';
 import Subhead_Lg from '../../UI/Subhead/Subhead_Lg/Subhead_Lg';
 import Subhead_Sm from '../../UI/Subhead/Subhead_Sm/Subhead_Sm';
 
-const Politics = () => {
+const Politics = (props) => {
   const { data, isLoading, error, fetchNow } = useFetch();
   const isDesktopLargest = useMediaQuery('(max-width: 75em)');
-
   const newsCtx = useContext(NewsContext);
+  
+  let section = '';
+  if(props.topic.url) {
+    section = props.topic.url;
+  }
+
   useEffect(() => {
     fetchNow({
-      url: `https://content.guardianapis.com/us-news?search?from-date=${
+      url: `https://content.guardianapis.com/${section}?search?from-date=${
         newsCtx.currentDate
       }&page-size=10&show-fields=body%2Cthumbnail%2CshouldHideAdverts%2Cheadline%2C&show-elements=image&show-blocks=all&show-tags=contributor&api-key=${
         import.meta.env.VITE_MY_API_KEY
@@ -82,7 +87,7 @@ const Politics = () => {
         <Line_Separator />
       </div>
 
-      <div className={styles.politics__topic}>Politics</div>
+      <div className={styles.politics__topic}>{props.topic.topic}</div>
       {!isLoading && !error && data && (
         <>
           <div className={styles.politics__block_1}>
