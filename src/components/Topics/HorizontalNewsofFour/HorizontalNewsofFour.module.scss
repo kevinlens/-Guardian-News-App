@@ -4,7 +4,47 @@
 .horizontalNewsofFour {
   display: grid;
   grid-column: full-start / full-end;
-  grid-row: 15/16;
+  grid-row: 16/17;
+  margin-top: 8rem;
+  margin-bottom: -5rem;
+
+  //DO NOT MOVE THE MEDIA QUERIES AROUND
+
+  @media only screen and (max-width: $bp-enormous) {
+    display: grid;
+    grid-row: 16/17;
+    margin-top: 102rem;
+    border-top: 1px solid black;
+  }
+
+  @media only screen and (max-width: $bp-largest) {
+    grid-row: 18/20;
+    grid-template-columns: 1fr 1fr;
+    margin-top:40rem;
+  }
+
+  @media only screen and (max-width: $bp-medium){
+    display: grid;
+    margin-top:50rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    display: grid;
+    margin-top: 220rem;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    display: grid;
+    margin-top: 180rem;
+  }
+
+  &__separator {
+    display: grid;
+    grid-column: 1/-1;
+    margin-bottom: 3rem;
+    @media only screen and (max-width: $bp-enormous) {
+      display: none;
+    }
+  }
 
   &__articles {
     display: grid;
@@ -17,7 +57,7 @@
     }
 
     //vertical line separator is non-existent for the last article
-    div:not(:nth-last-of-type(-n + 1)) {
+    a:not(:nth-last-of-type(-n + 1)) {
       ::after {
         content: '';
         position: absolute;
@@ -35,7 +75,7 @@
     @media only screen and (max-width: $bp-largest) {
       grid-template-columns: 1fr 1fr;
       //articles multiples of 2 will not after a vertical separator line pseudo element
-      div:first-child {
+      a:first-child {
         &::after {
           content: '';
           position: absolute;
@@ -48,29 +88,9 @@
       }
 
       //horizontal line separator is non-existent for the last two articles
-      div:not(:nth-last-of-type(-n + 2)) {
+      a:not(:nth-last-of-type(-n + 2)) {
         border-bottom: 1px solid black;
       }
     }
-  }
-
-  //DO NOT MOVE THE MEDIA QUERIES AROUND
-
-  @media only screen and (max-width: $bp-enormous) {
-    margin-top: 4rem;
-  }
-
-  @media only screen and (max-width: $bp-largest) {
-    grid-row: 18/20;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media only screen and (max-width: $bp-small) {
-    display: none;
-  }
-
-  &__separator {
-    display: grid;
-    grid-column: 1/-1;
   }
 }

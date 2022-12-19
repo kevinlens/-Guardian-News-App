@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Filler_Subhead_Aside_xs.module.scss'
-
+import { Link } from "react-router-dom"
 const Filler_Subhead_Aside_xs = ({article}) => {
   let content = '';
 
@@ -14,9 +14,9 @@ const Filler_Subhead_Aside_xs = ({article}) => {
   }
 
   return (
-    <div className={styles.subhead}>
+    <Link to="/summary"  className={styles.subhead} state={{ data: article }}>
       {content}
-    </div>
+    </Link>
   )
 }
 

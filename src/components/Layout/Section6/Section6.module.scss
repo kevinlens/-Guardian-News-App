@@ -5,6 +5,7 @@
   display: grid;
   grid-column: full-start / full-end;
   grid-row: 37/38;
+
   @media only screen and (max-width: $bp-enormous) {
     grid-row: 35/36;
     margin-top: 2rem;
@@ -16,12 +17,15 @@
     grid-row: 57/58;
   }
   @media only screen and (max-width: $bp-medium) {
-    grid-row: 59/60;
+    grid-row: 52/53;
+    margin-top:-55rem;
   }
   @media only screen and (max-width: $bp-small) {
-    grid-row: 63/64;
+    display: grid;
+    grid-row: 25/26;
   }
   @media only screen and (max-width: $bp-smallest) {
     grid-row: 58/59;
   }
 }
+

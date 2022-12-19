@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from "react-router-dom"
 import styles from './Subhead_Lg.module.scss';
+
 const Subhead_Lg = ({article}) => {
 
   let content = '';
@@ -20,10 +22,9 @@ const Subhead_Lg = ({article}) => {
     );
   }
   return (
-    <div className={styles.subhead}>
+    <Link to="/summary"  className={styles.subhead} state={{ data: article }}>
       {content}
-           
-    </div>
+    </Link>
   );
 };
 

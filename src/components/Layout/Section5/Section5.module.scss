@@ -18,7 +18,9 @@
     grid-row: 50/51;
   }
   @media only screen and (max-width: $bp-small) {
-    grid-row: 58/59;
+    display: grid;
+    grid-row: 23/24;
+    margin-bottom: 5rem;
   }
   @media only screen and (max-width: $bp-smallest) {
     grid-row: 53/54;

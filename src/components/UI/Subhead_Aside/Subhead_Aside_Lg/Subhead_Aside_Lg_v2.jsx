@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom"
 import styles from './Subhead_Aside_Lg_v2.module.scss';
 import Line_Separator from '../../Line_Separator/Line_Separator';
 const Subhead_Aside_Lg_v2 = ({ article }) => {
@@ -23,12 +24,12 @@ const Subhead_Aside_Lg_v2 = ({ article }) => {
     );
   }
   return (
-    <div className={styles.subhead}>
+    <Link to="/summary" className={styles.subhead} state={{ data: article }}>
       <div className={styles.subhead__separator}>
         <Line_Separator />
       </div>
       {content}
-    </div>
+    </Link>
   );
 };
 

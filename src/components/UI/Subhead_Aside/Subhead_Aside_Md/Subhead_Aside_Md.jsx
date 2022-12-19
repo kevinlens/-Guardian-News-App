@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from "react-router-dom"
 import styles from './Subhead_Aside_Md.module.scss'
 
 const Subhead_Aside_Md = ({article}) => {
@@ -17,9 +17,9 @@ const Subhead_Aside_Md = ({article}) => {
   }
 
   return (
-    <div className={styles.subhead}>
+    <Link to="/summary"  className={styles.subhead} state={{ data: article }}>
       {content}
-    </div>
+    </Link>
   )
 }
 

@@ -5,15 +5,23 @@
 .Hot_News{
   display: grid;
   grid-column: 1 / 9;
+  
   @media only screen and (max-width: $bp-enormous){
-    margin-top:2rem;
+    margin-top:-8rem;
     grid-column: full-start / full-end;
+    margin-top: -3rem;
   }
 
-  @media only screen and (max-width: $bp-small){
-    grid-column: full-start / full-end;
-    font-size: 2rem;
+  @media only screen and (max-width: $bp-medium){
+    display: grid;
+    grid-row: 1/2;
+  }
 
+
+  @media only screen and (max-width: $bp-small){
+    display: grid;
+    grid-column: full-start / full-end;
+    grid-row: 1/2;
   }
 
   &__separator {
@@ -23,4 +31,3 @@
   }
 
 }
-

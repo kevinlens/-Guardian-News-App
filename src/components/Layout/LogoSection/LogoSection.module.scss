@@ -6,16 +6,22 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content;
   grid-column: full-start / full-end;
-  grid-row: 2/4;
+  grid-row: 2/3;
+  margin-top:-10rem;
   align-items: center;
-  padding-top: 2rem;
+
+  @media only screen and (max-width: $bp-enormous){
+
+  }
+
   @media only screen and (max-width: $bp-largest){
 
   }
+
   &__logo {
     display: flex;
     justify-self: center;
-    margin-bottom: 1rem;
+
     z-index: 10;
   }
 
@@ -27,6 +33,7 @@
     font-size: 1.8rem;
     grid-column: 1/2;
     font-style: italic;
+    margin-top:-12rem;
     @media only screen and (max-width: $bp-largest){
       font-size: 2rem;
     }

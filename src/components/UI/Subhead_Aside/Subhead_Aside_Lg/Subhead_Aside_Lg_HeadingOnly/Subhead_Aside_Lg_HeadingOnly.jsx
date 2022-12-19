@@ -1,16 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styles from './Subhead_Aside_Lg_HeadingOnly.module.scss';
 
-import styles from './Subhead_Aside_Lg_HeadingOnly.module.scss'
-
-const Subhead_Aside_Lg_HeadingOnly = ({article}) => {
-  
+const Subhead_Aside_Lg_HeadingOnly = ({ article }) => {
   return (
-    <div className={styles.subhead}>
-      {article &&
-      <h3>{article.title}</h3>
-      }
-    </div>
-  )
-}
+    <Link to='/summary' className={styles.subhead} state={{ data: article }}>
+      {article && <h3>{article.title}</h3>}
+    </Link>
+  );
+};
 
 export default Subhead_Aside_Lg_HeadingOnly;

@@ -1,10 +1,18 @@
+@import '../styles/variables.scss';
+@import '../styles/typography.scss';
+
 .summary {
   display: grid;
   grid-column: full-start/logo-end;
+  grid-row: auto;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: full-start/full-end;
+
+  }
 
   h1 {
     font-size: 5.25rem;
-    margin-top: 5rem;
     margin-bottom: 2rem;
   }
 
@@ -18,9 +26,13 @@
   &__img {
     display: grid;
     grid-column: 1/-1;
-    width: 84.5rem;
-    height: 57.5rem;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
     margin-bottom: 3rem;
+    @media only screen and (max-width: $bp-medium) {
+      width: 80%;
+    }
   }
 
   aside {

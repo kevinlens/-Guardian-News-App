@@ -4,24 +4,24 @@
 .section4 {
   display: grid;
   grid-column: full-start / full-end;
-  grid-row: 28/29;
-
-  
+  grid-row: 29/30;
   @media only screen and (max-width: $bp-enormous) {
     display: grid;
-    grid-row: 27/28;
+    grid-row: 24/25;
   }
   @media only screen and (max-width: $bp-largest) {
     display: grid;
     grid-row: 36/37;
+    margin-top: 5rem;
   }
   @media only screen and (max-width: $bp-medium) {
     display: grid;
-    grid-row: 39/40;
+    grid-row: 27/28;
+    margin-top: -50rem;
   }
   @media only screen and (max-width: $bp-small) {
     display: grid;
-    grid-row: 43/44;
+    grid-row: 22/23;
   }
   @media only screen and (max-width: $bp-smallest) {
     display: grid;

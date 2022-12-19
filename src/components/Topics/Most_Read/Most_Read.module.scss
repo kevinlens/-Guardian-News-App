@@ -11,7 +11,9 @@
   @media only screen and (max-width: $bp-enormous) {
     grid-template-columns: 50% 50%;
   }
+  @media only screen and (max-width: $bp-medium) {
 
+  }
   &__articles {
     display: grid;
     grid-template-columns: 1fr;
@@ -20,7 +22,7 @@
     //horizontal line separator is non-existent for the last two articles
     div:not(:last-child):not(:first-child) {
       border-bottom: 1px solid black;
-      margin-bottom: 2.2rem;
+      padding-bottom: 2.2rem;
     }
     &__topic {
       display: grid;

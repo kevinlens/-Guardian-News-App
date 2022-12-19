@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Subhead_Sm.module.scss';
-
+import { Link } from "react-router-dom"
 const Subhead_Sm = ({article}) => {
   let content = '';
 
@@ -20,7 +20,7 @@ const Subhead_Sm = ({article}) => {
     );
   }
 
-  return <div className={styles.subhead}>{content}</div>;
+  return <Link to="/summary" className={styles.subhead} state={{ data: article }}> {content}</Link>;
 };
 
 export default Subhead_Sm;

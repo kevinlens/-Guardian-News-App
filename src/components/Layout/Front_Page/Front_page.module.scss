@@ -1,8 +1,11 @@
+@import '../../../styles/variables';
+@import '../../../styles/typography';
+
 
 section {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(15, 11.5rem);
   grid-column: full-start/full-end;
-  grid-row: 4/8;
+  grid-row: 3/10;
 }

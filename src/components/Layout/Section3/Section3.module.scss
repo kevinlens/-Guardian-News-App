@@ -4,25 +4,31 @@
 .section3 {
    display: grid;
    grid-column: full-start / full-end;
-   grid-row: 25/26;
+   grid-row: 26/27;
 
    @media only screen and (max-width: $bp-enormous) {
       display: grid;
-      grid-row: 24/25;
+      grid-row: 17/18;
    }
 
    @media only screen and (max-width: $bp-largest) {
       display: grid;
-      grid-row: 29/30;
+      grid-row: 21/22;
+      margin-top: -40rem;
+   }
+
+   @media only screen and (max-width: $bp-large) {
+      grid-row: 21/22;
+      margin-top: -40rem;
    }
 
    @media only screen and (max-width: $bp-medium) {
-      display: grid;
-      grid-row: 33/34;
+      grid-row: 26/27;
+      margin-top:170rem;
    }
    @media only screen and (max-width: $bp-small) {
       display: grid;
-      grid-row: 41/42;
+      grid-row: 21/22;
    }
    @media only screen and (max-width: $bp-smallest) {
       display: grid;
