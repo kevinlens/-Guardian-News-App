@@ -8,6 +8,7 @@ const useFetch = () => {
   const [error, setError] = useState(null);
   const [data, setData] = useState();
 
+  //get current date
   const newsCtx = useContext(NewsContext);
 
 

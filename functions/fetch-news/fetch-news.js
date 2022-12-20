@@ -23,10 +23,12 @@ const handler = async (event) => {
 
   }catch(error){
     const {status, statusText, headers, data} = error.response;
+
     return{
       statusCode: status,
       body: JSON.stringify({status, statusText, headers, data})
     }
+    
   }
 }
 
