@@ -18,7 +18,7 @@ import Section6 from '../components/Layout/Section6/Section6';
 import Footer from '../components/Layout/Footer/Footer';
 import NewsProvider from '../store/NewsProvider';
 import Summary from '../pages/Summary';
-
+import ScrollToTop from '../components/UI/ScrollToTop/ScrollToTop';
 //FONTS
 import '../assets/Fonts/PostoniWide-Regular.woff2';
 import '../assets/Fonts/PostoniWide-Bold.woff2';
@@ -28,6 +28,7 @@ import '../assets/Fonts/ITC_Franklin-Bold.woff2';
 function App() {
   return (
     <section className={styles.container}>
+      <ScrollToTop> 
       <Routes>
         <Route
           path='/'
@@ -48,7 +49,7 @@ function App() {
               </NewsProvider>
             </>
           }
-        />
+          />
         <Route
           path='/summary'
           element={
@@ -57,8 +58,9 @@ function App() {
               <Summary />
             </NewsProvider>
           }
-        />
+          />
       </Routes>
+    </ScrollToTop>
     </section>
   );
 }

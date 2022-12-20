@@ -9,8 +9,9 @@ const axios = require('axios')
 
 const handler = async (event) => {
   const { currentDate, category } = event.queryStringParameters;
+  
   const API_SECRET = process.env.API_SECRET
-  const url = `https://content.guardianapis.com/${category}?search?from-date=${currentDate}&page-size=10&show-fields=body%2Cthumbnail%2CshouldHideAdverts%2Cheadline%2C&show-elements=image&show-blocks=all&show-tags=contributor&api-key=${API_SECRET}`;
+  const url = `https://content.guardianapis.com/${category}?search?from-date=${currentDate}&page-size=10&show-fields=body%2Cthumbnail%2CshouldHideAdverts%2Cheadline%2C&show-elements=image&show-blocks=all&show-tags=contributor&api-key=3b31bf19-c2c5-4f56-8f36-571feb78114e`;
 
   try {
     const { data } = await axios.get(url)
