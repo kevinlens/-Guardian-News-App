@@ -25,9 +25,7 @@ const Hot_News = () => {
 
   const newsCtx = useContext(NewsContext);
   useEffect(() => {
-    fetchNow({
-      url: `https://content.guardianapis.com/food?search?from-date=${newsCtx.currentDate}&page-size=10&show-fields=body%2Cthumbnail%2CshouldHideAdverts%2Cheadline%2C&show-elements=image&show-blocks=all&show-tags=contributor&api-key=${import.meta.env.VITE_MY_API_KEY}`,
-    });
+    fetchNow({category: 'food'});
   }, [fetchNow]);
 
   let status = '';

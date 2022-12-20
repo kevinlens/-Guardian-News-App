@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "netlify": "./node_modules/.bin/netlify"
   },
   "dependencies": {
+    "axios": "^1.2.1",
     "html-react-parser": "^3.0.4",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.40",
@@ -22,6 +24,7 @@
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
+    "netlify-cli": "^12.4.0",
     "sass": "^1.56.0",
     "vite": "^3.2.3"
   }
