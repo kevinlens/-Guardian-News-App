@@ -41,15 +41,16 @@ const useFetch = () => {
         }
 
         //getting biggest photo possible for more pixels
-        if (!newsData.blocks.main) {
-          primaryPhoto = newsData.fields.thumbnail;
-        } else if (newsData.blocks.main.elements[0].assets[5]) {
+        if (newsData.blocks.main.elements[0].assets[5]) {
           primaryPhoto = newsData.blocks.main.elements[0].assets[5].file;
         } else if (newsData.blocks.main.elements[0].assets[4]) {
           primaryPhoto = newsData.blocks.main.elements[0].assets[4].file;
         } else if (newsData.blocks.main.elements[0].assets[3]) {
           primaryPhoto = newsData.blocks.main.elements[0].assets[3].file;
+        } else {
+          primaryPhoto = newsData.fields.thumbnail;
         }
+
         //every 'data' object comes back with a set of these custom properties
         return {
           id: newsData.id,
