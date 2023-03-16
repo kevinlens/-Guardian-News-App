@@ -12,6 +12,7 @@ const Subhead_Aside_xs = ({ article }) => {
           <p className={styles.subhead__header__author}>by {article.author}</p>
         </h3>
         <img
+          loading="lazy"
           className={styles.subhead__img}
           src={article.image}
           alt='example image'

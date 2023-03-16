@@ -12,7 +12,7 @@ if (article) {
         <h3 className={styles.subhead__header}>{article.title}</h3>
         <p className={styles.subhead__author}>by {article.author}</p>
       </div>
-      <img className={styles.subhead__img} src={article.image} alt='example image' />
+      <img className={styles.subhead__img} loading="lazy" src={article.image} alt='example image' />
     </>
   );
 }

@@ -24,6 +24,7 @@ const Summary = (props) => {
       <div className={styles.summary__author}>By {data.author}</div>
       <div className={styles.summary__time}>{formattedDate}</div>
       <img
+        loading="lazy"
         className={styles.summary__img}
         src={data.image}
         alt='example image'

@@ -9,7 +9,7 @@ const Subhead_xs = ({article}) => {
   if (article) {
     content = (
       <>
-      <img className={styles.subhead__img} src={article.image} alt='example image' />
+      <img className={styles.subhead__img} src={article.image} loading="lazy" alt='example image' />
       <p className={styles.subhead__header}>{article.title}</p>
       <p className={styles.subhead__author}>by {article.author}</p>
       </>

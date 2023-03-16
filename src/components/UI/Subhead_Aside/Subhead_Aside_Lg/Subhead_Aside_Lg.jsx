@@ -26,7 +26,7 @@ const Subhead_Aside_Lg = ({article, isMainArticle, topic}) => {
         <div className={styles.subhead__author}>By {article.author}</div>
       </div>
 
-      <img className={styles.subhead__img} src={article.image} alt='loading' />
+      <img loading="lazy" className={styles.subhead__img} src={article.image} alt='loading' />
 
       <div className={styles.subhead__credit}>
         <p>{article.photographer}</p>

@@ -8,7 +8,7 @@ const Filler_Subhead_Aside_xs = ({article}) => {
     content = (
       <>
         <p className={styles.subhead__header}>{article.title}</p>
-        <img className={styles.subhead__img} src={article.image} alt='example image' />
+        <img loading="lazy" className={styles.subhead__img} src={article.image} alt='example image' />
       </>
     );
   }

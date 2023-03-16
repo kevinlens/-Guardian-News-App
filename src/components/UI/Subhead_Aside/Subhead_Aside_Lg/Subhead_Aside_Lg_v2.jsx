@@ -13,6 +13,7 @@ const Subhead_Aside_Lg_v2 = ({ article }) => {
           <div className={styles.subhead__author}>By {article.author}</div>
         </div>
         <img
+          loading="lazy"
           className={styles.subhead__img}
           src={article.image}
           alt='example image'

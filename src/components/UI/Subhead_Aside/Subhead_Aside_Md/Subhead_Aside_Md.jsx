@@ -11,7 +11,7 @@ const Subhead_Aside_Md = ({article}) => {
       <>
       <h3 className={styles.subhead__header}>{article.title}</h3>
       <p className={styles.subhead__description}>{article.title}</p>
-      <img className={styles.subhead__img} src={article.image} alt='example image' />
+      <img loading="lazy" className={styles.subhead__img} src={article.image} alt='example image' />
       </>
     );
   }

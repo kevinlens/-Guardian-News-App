@@ -11,6 +11,7 @@ const Subhead_Sm = ({article}) => {
           className={styles.subhead__img}
           src={article.image}
           alt='loading'
+          loading="lazy"
         />
         <p className={styles.subhead__header}>{article.title}</p>
         <p className={styles.subhead__author}>
