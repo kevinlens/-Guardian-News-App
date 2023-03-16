@@ -41,7 +41,7 @@ const useFetch = () => {
         }
 
         if(newsData.tags.length >= 1){
-          console.log(newsData.fields.headline , newsData.blocks.main.elements[0])
+          console.log(newsData.fields.headline , newsData.blocks.main.elements[0], newsData.fields.thumbnail)
         }
         //getting biggest photo possible for more pixels
         if (newsData.blocks.main.elements[0].assets[3]) {
