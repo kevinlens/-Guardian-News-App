@@ -34,8 +34,8 @@ const useFetch = () => {
           img.onload = () => {
             setDimensions({ width: img.width, height: img.height });
           };
+          console.log('🍇🍇🍇🍇',newsData.blocks.main.elements[0].assets[3], dimensions)
         }
-        console.log('🍇🍇🍇🍇', dimensions)
         
         let author = '';
         if (newsData.tags.length >= 1) {
