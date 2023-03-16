@@ -40,7 +40,7 @@ const useFetch = () => {
           photographer = newsData.blocks.main.elements[0].imageTypeData.credit;
         }
 
-        if(newsData.tags.length >= 1 && newsData.blocks.main.elements == 'Moustafa Bayoumi'){
+        if(newsData.tags.length >= 1){
           console.log(newsData.blocks.main.elements[0])
         }
         //getting biggest photo possible for more pixels
