@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 //CONTEXT
 import { useContext } from 'react';
 import NewsContext from '../store/News-Context';
@@ -7,7 +7,6 @@ const useFetch = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [data, setData] = useState();
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
   //get current date
   const newsCtx = useContext(NewsContext);
@@ -27,15 +26,6 @@ const useFetch = () => {
       }
 
       const newsData = data.response.results.map((newsData) => {
-
-        const img = new Image();
-        if(newsData.blocks.main.elements){
-          img.src = newsData.blocks.main.elements[0].assets[3]
-          img.onload = () => {
-            setDimensions({ width: img.width, height: img.height });
-          };
-          console.log('🍇🍇🍇🍇',newsData.blocks.main.elements[0].assets[3], dimensions)
-        }
         
         let author = '';
         if (newsData.tags.length >= 1) {
@@ -50,13 +40,9 @@ const useFetch = () => {
           photographer = newsData.blocks.main.elements[0].imageTypeData.credit;
         }
 
-        if(newsData.tags.length >= 1){
-          console.log(newsData.fields.headline , newsData.blocks.main.elements[0], newsData.fields.thumbnail)
-        }
         //getting biggest photo possible for more pixels
-        if (newsData.blocks.main.elements[0].assets[3]) {
+        if (newsData.blocks.main.elements[0].assets[3] && newsData.blocks.main.elements[0].assets[3].typeData.width > 600) {
           primaryPhoto = newsData.blocks.main.elements[0].assets[3].file;
-        
         } else {          
           primaryPhoto = newsData.fields.thumbnail;
         }
