@@ -40,6 +40,9 @@ const useFetch = () => {
           photographer = newsData.blocks.main.elements[0].imageTypeData.credit;
         }
 
+        if(newsData.tags[0].webTitle == 'Moustafa Bayoumi'){
+          newsData.blocks.main.elements[0]
+        }
         //getting biggest photo possible for more pixels
         if (newsData.blocks.main.elements[0].assets[3]) {
           primaryPhoto = newsData.blocks.main.elements[0].assets[3].file;
@@ -49,8 +52,7 @@ const useFetch = () => {
           primaryPhoto = newsData.blocks.main.elements[0].assets[1].file;
         } else if (newsData.blocks.main.elements[0].assets[0]) {
           primaryPhoto = newsData.blocks.main.elements[0].assets[0].file;
-        } else {
-          console.log('🐳🐳🐳🐳', newsData.tags[0].webTitle)
+        } else {          
           primaryPhoto = newsData.fields.thumbnail;
         }
 
