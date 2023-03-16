@@ -41,8 +41,8 @@ const useFetch = () => {
         }
 
         //getting biggest photo possible for more pixels
-        if (newsData.blocks.main.elements[0].assets[3] && newsData.blocks.main.elements[0].assets[3].typeData.width > 600) {
-          primaryPhoto = newsData.blocks.main.elements[0].assets[3].file;
+        if (newsData.blocks.main.elements[0].assets[1] && newsData.blocks.main.elements[0].assets[1].typeData.width > 600) {
+          primaryPhoto = newsData.blocks.main.elements[0].assets[1].file;
         } else {          
           primaryPhoto = newsData.fields.thumbnail;
         }
