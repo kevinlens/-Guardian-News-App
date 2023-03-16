@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 //CONTEXT
 import { useContext } from 'react';
 import NewsContext from '../store/News-Context';
@@ -7,6 +7,7 @@ const useFetch = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [data, setData] = useState();
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
   //get current date
   const newsCtx = useContext(NewsContext);
@@ -26,6 +27,15 @@ const useFetch = () => {
       }
 
       const newsData = data.response.results.map((newsData) => {
+
+        const img = new Image();
+        if(newsData.blocks.main.elements){
+          img.src = newsData.blocks.main.elements[0].assets[3]
+          img.onload = () => {
+            setDimensions({ width: img.width, height: img.height });
+          };
+        }
+        console.log('🍇🍇🍇🍇', dimensions)
         
         let author = '';
         if (newsData.tags.length >= 1) {
